@@ -246,8 +246,9 @@
           <a href="mailto:kontakt@sveadigital.se" class="contact-link">kontakt@sveadigital.se</a>
         </div>
       </div>
-      <form class="contact-form" name="contact" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
-        <input type="hidden" name="form-name" value="contact" />
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="access_key" value="053d196a-f3f0-4b51-a1f1-504b00f67195" />
+        <input type="hidden" name="subject" value="Ny förfrågan via sveadigital.se" />
         <div class="form-group">
           <label for="name">Namn</label>
           <input type="text" id="name" name="name" placeholder="Anna Svensson" required />
@@ -329,18 +330,17 @@
       btn.textContent = 'Skickar...';
 
       try {
-        const response = await fetch('/', {
+        const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(new FormData(form)).toString()
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
         });
-        if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
           form.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
           success.classList.remove('hidden');
         } else {
-          btn.disabled = false;
-          btn.textContent = 'Skicka — vi hör av oss inom 24 h';
-          alert('Något gick fel. Hör av dig direkt till kontakt@sveadigital.se');
+          throw new Error(data.message);
         }
       } catch {
         btn.disabled = false;
