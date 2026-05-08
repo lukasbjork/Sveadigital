@@ -445,6 +445,12 @@ h3 {
   padding: 40px 32px;
   position: relative;
   transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:not(.pricing-card--featured) {
+  min-height: 500px;
 }
 .pricing-card:hover:not(.pricing-card--featured) {
   box-shadow: var(--shadow-lg);
@@ -519,6 +525,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
 }
 
 .plan-features li {
@@ -562,19 +569,6 @@ h3 {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.pricing-legal {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px 20px;
-  font-size: 13px;
-  color: var(--text-muted);
-  max-width: 720px;
-  margin: 0 auto 36px;
-  text-align: center;
-  line-height: 1.5;
 }
 
 .plan-features__header {
