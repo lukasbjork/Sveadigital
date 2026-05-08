@@ -1,29 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&amp;display=swap');</style>
+  </defs>
   <rect width="600" height="200" fill="#1B2035"/>
-
-  <!-- S path scaled to 600x200 canvas (S height ~160px, top margin 20px) -->
-  <path d="M 111,20 C 143,20 143,100 90,100 C 36,100 36,180 68,180"
-    fill="none" stroke="#44C8CE" stroke-width="50" stroke-linecap="round"/>
-  <path d="M 111,20 C 143,20 143,100 90,100 C 36,100 36,180 68,180"
-    fill="none" stroke="#1B2035" stroke-width="42" stroke-linecap="round"/>
-  <path d="M 111,20 C 143,20 143,100 90,100 C 36,100 36,180 68,180"
-    fill="none" stroke="#44C8CE" stroke-width="34" stroke-linecap="round"/>
-  <path d="M 111,20 C 143,20 143,100 90,100 C 36,100 36,180 68,180"
-    fill="none" stroke="#1B2035" stroke-width="26" stroke-linecap="round"/>
-  <path d="M 111,20 C 143,20 143,100 90,100 C 36,100 36,180 68,180"
-    fill="none" stroke="#44C8CE" stroke-width="18" stroke-linecap="round"/>
-  <path d="M 111,20 C 143,20 143,100 90,100 C 36,100 36,180 68,180"
-    fill="none" stroke="#1B2035" stroke-width="10" stroke-linecap="round"/>
-  <path d="M 111,20 C 143,20 143,100 90,100 C 36,100 36,180 68,180"
-    fill="none" stroke="#44C8CE" stroke-width="4" stroke-linecap="round"/>
-
-  <!-- Wordmark -->
-  <text x="192" y="92"
-    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-    font-size="54" font-weight="500"
-    fill="#44C8CE">Svea</text>
-  <text x="192" y="157"
-    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-    font-size="54" font-weight="500"
-    fill="#44C8CE">Digital</text>
+  <text x="300" y="85"
+    font-family="'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif"
+    font-size="80" font-weight="800"
+    fill="#44C8CE" text-anchor="middle" dominant-baseline="middle">Svea</text>
+  <text x="300" y="158"
+    font-family="'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif"
+    font-size="75" font-weight="800"
+    fill="#44C8CE" text-anchor="middle" dominant-baseline="middle">Digital</text>
 </svg>

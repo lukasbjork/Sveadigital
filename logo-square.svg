@@ -1,35 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
-  <!-- Dark background -->
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&amp;display=swap');</style>
+  </defs>
   <rect width="400" height="400" fill="#1B2035"/>
-
-  <!--
-    Concentric-contour S effect:
-    Each layer uses the same bezier path but a narrower stroke on top,
-    alternating cyan/dark to cut visible "rings" following the S curve.
-    Path: S centerline, upper-right terminal → lower-left terminal.
-  -->
-  <path d="M 138,72 C 188,72 188,196 106,196 C 22,196 22,320 72,320"
-    fill="none" stroke="#44C8CE" stroke-width="78" stroke-linecap="round"/>
-  <path d="M 138,72 C 188,72 188,196 106,196 C 22,196 22,320 72,320"
-    fill="none" stroke="#1B2035" stroke-width="65" stroke-linecap="round"/>
-  <path d="M 138,72 C 188,72 188,196 106,196 C 22,196 22,320 72,320"
-    fill="none" stroke="#44C8CE" stroke-width="52" stroke-linecap="round"/>
-  <path d="M 138,72 C 188,72 188,196 106,196 C 22,196 22,320 72,320"
-    fill="none" stroke="#1B2035" stroke-width="39" stroke-linecap="round"/>
-  <path d="M 138,72 C 188,72 188,196 106,196 C 22,196 22,320 72,320"
-    fill="none" stroke="#44C8CE" stroke-width="26" stroke-linecap="round"/>
-  <path d="M 138,72 C 188,72 188,196 106,196 C 22,196 22,320 72,320"
-    fill="none" stroke="#1B2035" stroke-width="14" stroke-linecap="round"/>
-  <path d="M 138,72 C 188,72 188,196 106,196 C 22,196 22,320 72,320"
-    fill="none" stroke="#44C8CE" stroke-width="5" stroke-linecap="round"/>
-
-  <!-- Wordmark -->
-  <text x="244" y="181"
-    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-    font-size="48" font-weight="500"
-    fill="#44C8CE">Svea</text>
-  <text x="244" y="247"
-    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-    font-size="48" font-weight="500"
-    fill="#44C8CE">Digital</text>
+  <text x="200" y="188"
+    font-family="'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif"
+    font-size="120" font-weight="800"
+    fill="#44C8CE" text-anchor="middle" dominant-baseline="middle">Svea</text>
+  <text x="200" y="310"
+    font-family="'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif"
+    font-size="112" font-weight="800"
+    fill="#44C8CE" text-anchor="middle" dominant-baseline="middle">Digital</text>
 </svg>
