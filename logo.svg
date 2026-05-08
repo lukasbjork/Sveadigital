@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <pattern id="sStripes" x="0" y="0" width="14" height="200" patternUnits="userSpaceOnUse">
+      <rect width="8.5" height="200" fill="#44C8CE"/>
+    </pattern>
+    <clipPath id="sShape">
+      <text x="92" y="168"
+        font-family="'Arial Black', 'Arial', sans-serif"
+        font-size="165" font-weight="900"
+        text-anchor="middle">S</text>
+    </clipPath>
+  </defs>
+  <!-- Dark background -->
+  <rect width="600" height="200" fill="#1B2035"/>
+  <!-- Striped S -->
+  <rect width="600" height="200" fill="url(#sStripes)" clip-path="url(#sShape)"/>
+  <!-- "Svea" text -->
+  <text x="215" y="102"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="62" font-weight="500"
+    fill="#44C8CE">Svea</text>
+  <!-- "Digital" text -->
+  <text x="215" y="170"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="62" font-weight="500"
+    fill="#44C8CE">Digital</text>
+</svg>
