@@ -564,6 +564,50 @@ h3 {
   margin-right: auto;
 }
 
+.pricing-legal {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.plan-features__header {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2px;
+}
+
+.feature-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.tag--nytt     { background: #e6f4ea; color: #1e7e34; }
+.tag--mer      { background: #e8f0fe; color: #1a56db; }
+.tag--snabbare { background: #fff3cd; color: #856404; }
+
+.pricing-card--featured .tag--nytt     { background: rgba(255,255,255,0.15); color: #6ee7a0; }
+.pricing-card--featured .tag--mer      { background: rgba(255,255,255,0.15); color: #93c5fd; }
+.pricing-card--featured .tag--snabbare { background: rgba(255,255,255,0.15); color: #fcd34d; }
+.pricing-card--featured .plan-features__header { color: rgba(255,255,255,0.4); border-color: rgba(255,255,255,0.2); }
+
 /* Contact perks checkmarks */
 .contact-perks .check { color: #34d399; }
 
