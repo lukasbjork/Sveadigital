@@ -346,11 +346,6 @@
     </div>
   </section>
 
-  <!-- STICKY MOBILE CTA -->
-  <div class="sticky-mobile-cta" id="stickyCta">
-    <a href="#kontakt">Boka gratis samtal &rarr;</a>
-  </div>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -395,15 +390,6 @@
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
-    });
-
-    window.addEventListener('scroll', function () {
-      const cta = document.getElementById('stickyCta');
-      if (!cta) return;
-      const threshold = document.body.scrollHeight * 0.3;
-      if (window.scrollY > threshold) {
-        cta.classList.add('visible');
-      }
     });
 
     async function handleSubmit(e) {
