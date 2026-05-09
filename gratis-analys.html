@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gratis hemsideanalys — Svea Digital</title>
+  <meta name="description" content="Få en gratis analys av din hemsida — eller ta reda på vad du missar utan en. Vi återkommer inom 24 timmar med konkreta förbättringsförslag." />
+  <link rel="canonical" href="https://sveadigital.se/gratis-analys" />
+  <meta property="og:title" content="Gratis hemsideanalys — Svea Digital" />
+  <meta property="og:description" content="Fyll i formuläret nedan. Vi analyserar din hemsida och skickar en rapport inom 24 timmar — helt gratis." />
+  <meta property="og:url" content="https://sveadigital.se/gratis-analys" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    .analys-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      padding: 80px 0 64px;
+      text-align: center;
+    }
+    .analys-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .analys-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 540px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .analys-badge {
+      display: inline-block;
+      background: rgba(13,148,136,0.15);
+      color: #0d9488;
+      border: 1px solid rgba(13,148,136,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .analys-wrap {
+      max-width: 620px;
+      margin: -40px auto 80px;
+      padding: 0 20px;
+    }
+    .analys-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 44px 40px;
+      box-shadow: 0 20px 60px rgba(15,23,42,0.14);
+    }
+    .analys-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .analys-card .sub {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 28px;
+    }
+    .analys-what {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .analys-what p {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .analys-what ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .analys-what li {
+      font-size: 0.95rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .analys-what li::before {
+      content: "✓";
+      color: #0d9488;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .radio-group {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .radio-option {
+      flex: 1;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .radio-option:has(input:checked) {
+      border-color: #2563eb;
+      background: rgba(37,99,235,0.04);
+    }
+    .radio-option input {
+      display: none;
+    }
+    .radio-option .label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #0f172a;
+    }
+    .radio-option .desc {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+    .url-field {
+      display: none;
+      margin-bottom: 20px;
+    }
+    .url-field.show {
+      display: block;
+    }
+    .form-privacy {
+      font-size: 12px;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .form-success {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      font-weight: 600;
+      color: #15803d;
+    }
+    .hidden { display: none; }
+    @media (max-width: 600px) {
+      .analys-card { padding: 28px 20px; }
+      .radio-group { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">Svea<span>Digital</span></a>
+      <nav class="nav-links">
+        <a href="/#priser">Priser</a>
+        <a href="/#hur">Hur det fungerar</a>
+        <a href="/#kontakt" class="btn btn-sm">Boka samtal</a>
+      </nav>
+      <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/#priser" onclick="toggleMenu()">Priser</a>
+      <a href="/#hur" onclick="toggleMenu()">Hur det fungerar</a>
+      <a href="/#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="analys-hero">
+    <div class="container">
+      <div class="analys-badge">Kostnadsfri analys</div>
+      <h1>Hur ser din närvaro online ut?</h1>
+      <p>Fyll i formuläret — vi analyserar din hemsida och berättar exakt vad du missar. Svar inom 24 timmar. Helt gratis, ingen förpliktelse.</p>
+    </div>
+  </section>
+
+  <!-- FORM CARD -->
+  <div class="analys-wrap">
+    <div class="analys-card">
+      <h2>Berätta om ditt företag</h2>
+      <p class="sub">Vi går igenom din situation manuellt och skickar en konkret rapport.</p>
+
+      <div class="analys-what">
+        <p>Vad rapporten inkluderar</p>
+        <ul>
+          <li>Mobilanpassning — ser sidan bra ut i mobilen?</li>
+          <li>Sidhastighet — laddar den tillräckligt snabbt?</li>
+          <li>Google-synlighet — syns du på Google Maps?</li>
+          <li>Kontaktmöjligheter — är det lätt att höra av sig?</li>
+          <li>Konkurrenter — vem syns istället för dig?</li>
+        </ul>
+      </div>
+
+      <form id="analysForm" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="access_key" value="053d196a-f3f0-4b51-a1f1-504b00f67195" />
+        <input type="hidden" name="subject" value="Gratis hemsideanalys via sveadigital.se" />
+
+        <div class="form-group">
+          <label>Har ditt företag en hemsida?</label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="har_hemsida" value="Ja" onchange="toggleUrl(true)" />
+              <div class="label">Ja</div>
+              <div class="desc">Jag vill veta hur den kan förbättras</div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="har_hemsida" value="Nej" onchange="toggleUrl(false)" />
+              <div class="label">Nej</div>
+              <div class="desc">Jag vill veta vad jag missar</div>
+            </label>
+          </div>
+        </div>
+
+        <div class="url-field form-group" id="urlField">
+          <label for="url">Er hemsideadress</label>
+          <input type="url" id="url" name="url" placeholder="https://minhemsida.se" />
+        </div>
+
+        <div class="form-group">
+          <label for="company">Företagsnamn</label>
+          <input type="text" id="company" name="company" placeholder="Din Salong AB" required />
+        </div>
+
+        <div class="form-group">
+          <label for="branch">Bransch</label>
+          <input type="text" id="branch" name="branch" placeholder="T.ex. frisör, elektriker, restaurang..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="city">Stad/ort</label>
+          <input type="text" id="city" name="city" placeholder="Stockholm" required />
+        </div>
+
+        <div class="form-group">
+          <label for="name">Ditt namn</label>
+          <input type="text" id="name" name="name" placeholder="Anna Svensson" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-post</label>
+          <input type="email" id="email" name="email" placeholder="anna@dinsakong.se" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefon <span class="optional">(valfritt)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="070-123 45 67" />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Skicka — jag vill ha min analys</button>
+        <p class="form-privacy">Vi delar aldrig dina uppgifter med tredje part.</p>
+        <div id="form-success" class="form-success hidden">
+          Tack! Vi skickar din analys inom 24 timmar till den e-postadress du angav.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">Svea<span>Digital</span></a>
+        <p>Professionella hemsidor för svenska småföretag.<br />Fast pris. Ingen startavgift. Hela Sverige.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigering</h4>
+        <div class="footer-links">
+          <a href="/#priser">Priser</a>
+          <a href="/#hur">Hur det fungerar</a>
+          <a href="/#kontakt">Kontakt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Kontakt</h4>
+        <div class="footer-links">
+          <a href="mailto:kontakt@sveadigital.se">kontakt@sveadigital.se</a>
+          <span>Hela Sverige, på distans</span>
+          <span>Svar inom 24 timmar</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Svea Digital AB &nbsp;·&nbsp; Alla priser exkl. moms</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    function toggleUrl(show) {
+      const field = document.getElementById('urlField');
+      field.classList.toggle('show', show);
+    }
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const success = document.getElementById('form-success');
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Skickar...';
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        const data = await response.json();
+        if (data.success) {
+          form.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
+          success.classList.remove('hidden');
+        } else {
+          throw new Error(data.message);
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Skicka — jag vill ha min analys';
+        alert('Något gick fel. Hör av dig direkt till kontakt@sveadigital.se');
+      }
+    }
+  </script>
+</body>
+</html>

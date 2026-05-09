@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Svea Digital — Professionella hemsidor för svenska småföretag</title>
-  <meta name="description" content="Svea Digital bygger professionella hemsidor för frisörer, hantverkare och restauranger i hela Sverige. Fast månadsavgift, ingen startavgift. Från 799 kr/mån." />
+  <title>Hemsida för småföretag | Svea Digital — Från 799 kr/mån</title>
+  <meta name="description" content="Svea Digital bygger professionella hemsidor för frisörer, hantverkare och restauranger. Ingen startavgift — bara 799 kr/mån. Leverans på 14 dagar. Hela Sverige." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -12,6 +12,70 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32x32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://sveadigital.se/" />
+  <meta property="og:title" content="Svea Digital — Professionella hemsidor för småföretag" />
+  <meta property="og:description" content="Ingen startavgift. Från 799 kr/mån. Leverans på 14 dagar. Hela Sverige." />
+  <meta property="og:url" content="https://sveadigital.se/" />
+  <meta property="og:image" content="https://sveadigital.se/og-image.png" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["ProfessionalService", "WebDesigner"],
+    "name": "Svea Digital AB",
+    "description": "Professionella hemsidor för svenska småföretag. Fast månadsavgift, ingen startavgift.",
+    "url": "https://sveadigital.se",
+    "email": "kontakt@sveadigital.se",
+    "areaServed": "SE",
+    "priceRange": "799-1799 SEK/månad",
+    "serviceType": "Webbutveckling och webbdesign",
+    "knowsLanguage": "sv",
+    "offers": [
+      {"@type": "Offer", "name": "Bas", "price": "799", "priceCurrency": "SEK"},
+      {"@type": "Offer", "name": "Standard", "price": "1199", "priceCurrency": "SEK"},
+      {"@type": "Offer", "name": "Premium", "price": "1799", "priceCurrency": "SEK"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Varför ingen startavgift?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Vi tror att en startavgift skapar onödig tröskel. Istället tjänar vi pengar när du stannar kvar — vilket betyder att vi måste leverera värde varje månad."}
+      },
+      {
+        "@type": "Question",
+        "name": "Vad händer om jag vill säga upp?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Du säger upp med 3 månaders varsel. Vill du ta med dig domänen och hemsidan löser du ut den för 3 × din månadsavgift."}
+      },
+      {
+        "@type": "Question",
+        "name": "Behöver jag kunna något om teknik?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Nej, ingenting. Vi sköter allt tekniskt — hosting, domän, uppdateringar och säkerhet. Du fokuserar på ditt jobb."}
+      },
+      {
+        "@type": "Question",
+        "name": "Hur lång tid tar det att bygga sidan?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Normalt 10–14 dagar från att vi har fått allt material (logga, bilder, text) från dig. Vi kan snabba upp om det är bråttom."}
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag uppgradera mitt paket senare?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ja, du kan byta till ett högre paket när som helst. Prisskillnaden justeras från nästa faktura."}
+      },
+      {
+        "@type": "Question",
+        "name": "Jobbar ni i hela Sverige?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Ja, vi jobbar helt på distans och hjälper kunder i hela landet. Möten sker via telefon eller videolänk."}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -22,6 +86,7 @@
       <nav class="nav-links">
         <a href="#priser">Priser</a>
         <a href="#hur">Hur det fungerar</a>
+        <a href="gratis-analys.html">Gratis analys</a>
         <a href="#kontakt" class="btn btn-sm">Boka samtal</a>
       </nav>
       <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
@@ -29,6 +94,7 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="#priser" onclick="toggleMenu()">Priser</a>
       <a href="#hur" onclick="toggleMenu()">Hur det fungerar</a>
+      <a href="gratis-analys.html" onclick="toggleMenu()">Gratis analys</a>
       <a href="#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
     </div>
   </header>
@@ -43,7 +109,8 @@
         <a href="#kontakt" class="btn btn-primary btn-lg">Boka ett gratis samtal</a>
         <a href="#priser" class="btn btn-ghost btn-lg">Se priser</a>
       </div>
-      <p class="hero-note">Ingen bindning de första 30 dagarna &nbsp;·&nbsp; Hela Sverige &nbsp;·&nbsp; Svar inom 24 h</p>
+      <div class="hero-trial-badge">✓ Prova gratis i 30 dagar — ingen bindning</div>
+      <p class="hero-note">Hela Sverige &nbsp;·&nbsp; Svar inom 24 h</p>
     </div>
   </section>
 
@@ -77,27 +144,27 @@
       <div class="industry-grid">
         <div class="industry-card">
           <div class="industry-icon">✂️</div>
-          <h3>Frisörer & salonger</h3>
+          <h3>Hemsida för frisörer & salonger</h3>
           <p>Visa upp dina tjänster, prislista och öppettider. Ta emot bokningar direkt via sidan.</p>
         </div>
         <div class="industry-card">
           <div class="industry-icon">🔨</div>
-          <h3>Hantverkare</h3>
+          <h3>Hemsida för hantverkare</h3>
           <p>Bygg förtroende med referensprojekt och ett enkelt kontaktformulär för offertförfrågningar.</p>
         </div>
         <div class="industry-card">
           <div class="industry-icon">🍽️</div>
-          <h3>Restauranger & caféer</h3>
+          <h3>Hemsida för restauranger & caféer</h3>
           <p>Meny, öppettider, bordsbokning och Google Maps-integration — allt samlat.</p>
         </div>
         <div class="industry-card">
           <div class="industry-icon">💪</div>
-          <h3>PT & träningsstudios</h3>
+          <h3>Hemsida för PT & träningsstudios</h3>
           <p>Presentera dina program, scheman och paket. Gör det lätt att komma igång.</p>
         </div>
         <div class="industry-card">
           <div class="industry-icon">🧹</div>
-          <h3>Städföretag</h3>
+          <h3>Hemsida för städföretag</h3>
           <p>Tydlig service-lista och prisindikation — så att rätt kunder hör av sig direkt.</p>
         </div>
         <div class="industry-card industry-card--cta">
@@ -279,6 +346,11 @@
     </div>
   </section>
 
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-mobile-cta" id="stickyCta">
+    <a href="#kontakt">Boka gratis samtal &rarr;</a>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -291,6 +363,7 @@
         <div class="footer-links">
           <a href="#priser">Priser</a>
           <a href="#hur">Hur det fungerar</a>
+          <a href="gratis-analys.html">Gratis hemsideanalys</a>
           <a href="#kontakt">Kontakt</a>
         </div>
       </div>
@@ -322,6 +395,15 @@
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
+    });
+
+    window.addEventListener('scroll', function () {
+      const cta = document.getElementById('stickyCta');
+      if (!cta) return;
+      const threshold = document.body.scrollHeight * 0.3;
+      if (window.scrollY > threshold) {
+        cta.classList.add('visible');
+      }
     });
 
     async function handleSubmit(e) {
