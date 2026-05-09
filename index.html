@@ -86,6 +86,7 @@
       <nav class="nav-links">
         <a href="#priser">Priser</a>
         <a href="#hur">Hur det fungerar</a>
+        <a href="blogg/">Blogg</a>
         <a href="gratis-analys.html">Gratis analys</a>
         <a href="#kontakt" class="btn btn-sm">Boka samtal</a>
       </nav>
@@ -94,6 +95,7 @@
     <div class="mobile-menu" id="mobileMenu">
       <a href="#priser" onclick="toggleMenu()">Priser</a>
       <a href="#hur" onclick="toggleMenu()">Hur det fungerar</a>
+      <a href="blogg/" onclick="toggleMenu()">Blogg</a>
       <a href="gratis-analys.html" onclick="toggleMenu()">Gratis analys</a>
       <a href="#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
     </div>
@@ -173,6 +175,49 @@
           <p>Vi hjälper alla lokala tjänsteföretag. Hör av dig så berättar vi vad vi kan göra för dig.</p>
           <a href="#kontakt" class="btn btn-primary">Kontakta oss</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <h2>Exempelarbeten</h2>
+      <p class="section-sub">Så här kan din hemsida se ut — klicka för att utforska.</p>
+      <div class="portfolio-grid">
+        <a href="showcase/salong-stella.html" class="portfolio-card" target="_blank">
+          <div class="portfolio-card-header portfolio-card-header--rose">
+            <div class="portfolio-mockup">✂️</div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-tag">Frisörsalong</div>
+            <h3>Salong Stella</h3>
+            <p>Stilren salong med tjänstemeny, prislista, kundrecensioner och bokningsformulär.</p>
+            <span class="portfolio-link">Öppna exempelsida →</span>
+          </div>
+        </a>
+        <a href="showcase/bjorklunds-el.html" class="portfolio-card" target="_blank">
+          <div class="portfolio-card-header portfolio-card-header--blue">
+            <div class="portfolio-mockup">⚡</div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-tag">Hantverkare</div>
+            <h3>Björklunds El AB</h3>
+            <p>Professionell sida för elektriker med tjänster, certifieringar och kontaktformulär.</p>
+            <span class="portfolio-link">Öppna exempelsida →</span>
+          </div>
+        </a>
+        <a href="showcase/restaurang-hamnen.html" class="portfolio-card" target="_blank">
+          <div class="portfolio-card-header portfolio-card-header--navy">
+            <div class="portfolio-mockup">🍽️</div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-tag">Restaurang</div>
+            <h3>Restaurang Hamnen</h3>
+            <p>Elegant restaurangsida med meny, öppettider och bokningssystem för bordsbokning.</p>
+            <span class="portfolio-link">Öppna exempelsida →</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -358,6 +403,7 @@
         <div class="footer-links">
           <a href="#priser">Priser</a>
           <a href="#hur">Hur det fungerar</a>
+          <a href="blogg/">Blogg</a>
           <a href="gratis-analys.html">Gratis hemsideanalys</a>
           <a href="#kontakt">Kontakt</a>
         </div>
@@ -408,8 +454,7 @@
         });
         const data = await response.json();
         if (data.success) {
-          form.querySelectorAll('input, textarea, button').forEach(el => el.disabled = true);
-          success.classList.remove('hidden');
+          window.location.href = 'tack.html';
         } else {
           throw new Error(data.message);
         }

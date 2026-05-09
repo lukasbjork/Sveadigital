@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tack för din förfrågan — Svea Digital</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    .tack-wrap {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+    .tack-card {
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+    }
+    .tack-icon {
+      width: 72px;
+      height: 72px;
+      background: #f0fdf4;
+      border: 2px solid #bbf7d0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 28px;
+    }
+    .tack-card h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: #0f172a;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .tack-card p {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .tack-steps {
+      background: #f8fafc;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin: 32px 0;
+      text-align: left;
+    }
+    .tack-steps p {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+    .tack-steps ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 0;
+    }
+    .tack-steps li {
+      font-size: 0.97rem;
+      color: #0f172a;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .tack-steps li::before {
+      content: "✓";
+      color: #0d9488;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .tack-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+    .tack-blog-tip {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid #e2e8f0;
+    }
+    .tack-blog-tip p {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+    .blog-link-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-decoration: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .blog-link-card:hover {
+      border-color: #2563eb;
+      box-shadow: 0 4px 16px rgba(37,99,235,0.1);
+    }
+    .blog-link-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .blog-link-text strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    .blog-link-text span {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">Svea<span>Digital</span></a>
+      <nav class="nav-links">
+        <a href="/#priser">Priser</a>
+        <a href="/#hur">Hur det fungerar</a>
+        <a href="/gratis-analys.html">Gratis analys</a>
+        <a href="/#kontakt" class="btn btn-sm">Boka samtal</a>
+      </nav>
+      <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/#priser" onclick="toggleMenu()">Priser</a>
+      <a href="/#hur" onclick="toggleMenu()">Hur det fungerar</a>
+      <a href="/gratis-analys.html" onclick="toggleMenu()">Gratis analys</a>
+      <a href="/#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
+    </div>
+  </header>
+
+  <div class="tack-wrap">
+    <div class="tack-card">
+
+      <div class="tack-icon">✓</div>
+
+      <h1>Tack — vi har tagit emot din förfrågan!</h1>
+      <p>Vi återkommer till dig inom <strong>24 timmar</strong> med svar och nästa steg.</p>
+
+      <div class="tack-steps">
+        <p>Vad händer nu?</p>
+        <ul>
+          <li>Vi läser igenom din förfrågan och förbereder oss</li>
+          <li>Du får ett e-postmeddelande med bekräftelse och tid för samtal</li>
+          <li>Vi pratar 20 minuter och tar reda på exakt vad du behöver</li>
+        </ul>
+      </div>
+
+      <div class="tack-actions">
+        <a href="/" class="btn btn-outline">Tillbaka till startsidan</a>
+        <a href="/blogg/" class="btn btn-primary">Läs våra guider</a>
+      </div>
+
+      <div class="tack-blog-tip">
+        <p>Medan du väntar — vår mest lästa guide:</p>
+        <a href="/blogg/vad-kostar-en-hemsida-2026.html" class="blog-link-card">
+          <div class="blog-link-icon">📖</div>
+          <div class="blog-link-text">
+            <strong>Vad kostar en hemsida 2026?</strong>
+            <span>Komplett guide med riktiga priser · 7 min läsning</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">Svea<span>Digital</span></a>
+        <p>Professionella hemsidor för svenska småföretag.<br />Fast pris. Ingen startavgift. Hela Sverige.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigering</h4>
+        <div class="footer-links">
+          <a href="/#priser">Priser</a>
+          <a href="/#hur">Hur det fungerar</a>
+          <a href="/gratis-analys.html">Gratis hemsideanalys</a>
+          <a href="/#kontakt">Kontakt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Kontakt</h4>
+        <div class="footer-links">
+          <a href="mailto:kontakt@sveadigital.se">kontakt@sveadigital.se</a>
+          <span>Hela Sverige, på distans</span>
+          <span>Svar inom 24 timmar</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Svea Digital AB &nbsp;·&nbsp; Alla priser exkl. moms</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

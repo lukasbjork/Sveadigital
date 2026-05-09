@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogg — Guider för svenska småföretag — Svea Digital</title>
+  <meta name="description" content="Guider, tips och insikter om hemsidor, lokal SEO och digital närvaro för svenska frisörer, hantverkare och restauranger." />
+  <link rel="canonical" href="https://sveadigital.se/blogg/" />
+  <meta property="og:title" content="Blogg — Guider för svenska småföretag" />
+  <meta property="og:description" content="Guider, tips och insikter om hemsidor, lokal SEO och digital närvaro för svenska småföretag." />
+  <meta property="og:url" content="https://sveadigital.se/blogg/" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <style>
+    .blogg-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+    .blogg-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .blogg-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .blogg-grid-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 28px;
+    }
+    .article-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: box-shadow 0.18s, border-color 0.18s;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-card:hover {
+      box-shadow: 0 8px 32px rgba(15,23,42,0.1);
+      border-color: #cbd5e1;
+    }
+    .article-card-body {
+      padding: 28px 28px 20px;
+      flex: 1;
+    }
+    .article-meta {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+    .article-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .article-card p {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .article-card-footer {
+      padding: 16px 28px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .read-more {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #2563eb;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .read-more:hover { color: #1d4ed8; }
+    .read-time {
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+    .article-badge {
+      display: inline-block;
+      background: rgba(37,99,235,0.08);
+      color: #2563eb;
+      border-radius: 100px;
+      padding: 3px 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .blogg-cta {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .blogg-cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .blogg-cta p {
+      font-size: 1rem;
+      color: #475569;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 600px) {
+      .article-grid { grid-template-columns: 1fr; }
+      .blogg-cta { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">Svea<span>Digital</span></a>
+      <nav class="nav-links">
+        <a href="/#priser">Priser</a>
+        <a href="/#hur">Hur det fungerar</a>
+        <a href="/blogg/">Blogg</a>
+        <a href="/gratis-analys.html">Gratis analys</a>
+        <a href="/#kontakt" class="btn btn-sm">Boka samtal</a>
+      </nav>
+      <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/#priser" onclick="toggleMenu()">Priser</a>
+      <a href="/#hur" onclick="toggleMenu()">Hur det fungerar</a>
+      <a href="/blogg/" onclick="toggleMenu()">Blogg</a>
+      <a href="/gratis-analys.html" onclick="toggleMenu()">Gratis analys</a>
+      <a href="/#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="blogg-hero">
+    <div class="container">
+      <div class="badge">Guider för svenska småföretag</div>
+      <h1>Blogg</h1>
+      <p>Konkreta tips om hemsidor, lokal SEO och digital närvaro — skrivet för dig som driver ett litet företag.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE GRID -->
+  <div class="blogg-grid-wrap">
+    <div class="article-grid">
+
+      <article class="article-card">
+        <div class="article-card-body">
+          <div class="article-badge">Data och insikter</div>
+          <p class="article-meta">9 maj 2026</p>
+          <h2>Vi kollade 490 frisörer i Stockholm — 400 saknar hemsida</h2>
+          <p>Vi kartlade frisörsalonger i Stockholmsregionen med eget verktyg. Resultatet berättar något viktigt om möjligheterna — och varför konkurrensen om Google-trafik är lägre än du tror.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="/blogg/490-frisorer-stockholm.html" class="read-more">Läs artikeln →</a>
+          <span class="read-time">5 min</span>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-body">
+          <div class="article-badge">Checklista</div>
+          <p class="article-meta">9 maj 2026</p>
+          <h2>10 saker din hemsida måste ha (checklista 2026)</h2>
+          <p>Har din hemsida allt den behöver för att konvertera besökare till kunder? Gå igenom de 10 grundläggande elementen — saknar du mer än tre är det dags att agera.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="/blogg/checklista-hemsida.html" class="read-more">Läs artikeln →</a>
+          <span class="read-time">6 min</span>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-body">
+          <div class="article-badge">Lokal SEO</div>
+          <p class="article-meta">9 maj 2026</p>
+          <h2>Google Business Profile för hantverkare — komplett guide 2026</h2>
+          <p>En gratis profil på Google kan ge fler leads än dyr annonsering. Steg-för-steg-guide för elektriker, rörmokare och hantverkare som vill synas lokalt.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="/blogg/google-business-profile-hantverkare.html" class="read-more">Läs artikeln →</a>
+          <span class="read-time">8 min</span>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-body">
+          <div class="article-badge">Strategi</div>
+          <p class="article-meta">9 maj 2026</p>
+          <h2>Hemsida vs Instagram — vad behöver ditt företag?</h2>
+          <p>Räcker Instagram som digital närvaro för ditt företag — eller behöver du en hemsida också? Vi reder ut skillnaderna ärligt, med en jämförelsetabell.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="/blogg/hemsida-vs-instagram.html" class="read-more">Läs artikeln →</a>
+          <span class="read-time">7 min</span>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-body">
+          <div class="article-badge">Frisörer</div>
+          <p class="article-meta">9 maj 2026</p>
+          <h2>7 tecken att din frisörsalong behöver en hemsida</h2>
+          <p>Driver du en frisörsalong utan hemsida? Här är sju konkreta tecken på att det kostar dig kunder varje vecka — och vad du gör åt det.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="/blogg/7-tecken-frisorsalong-hemsida.html" class="read-more">Läs artikeln →</a>
+          <span class="read-time">6 min</span>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-card-body">
+          <div class="article-badge">Priser och jämförelse</div>
+          <p class="article-meta">9 maj 2026</p>
+          <h2>Vad kostar en hemsida 2026? Komplett guide för småföretag</h2>
+          <p>Allt från 0 kronor på Wix till 200 000 kr hos en byrå. Vi jämför alla alternativ med riktiga priser och dolda kostnader — och berättar vad som faktiskt passar ett litet företag.</p>
+        </div>
+        <div class="article-card-footer">
+          <a href="/blogg/vad-kostar-en-hemsida-2026.html" class="read-more">Läs artikeln →</a>
+          <span class="read-time">7 min</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="blogg-cta">
+      <h2>Vill du ha en analys av din digitala närvaro?</h2>
+      <p>Vi analyserar din hemsida gratis och berättar exakt vad du missar — och vad det kostar dig i förlorade kunder.</p>
+      <a href="/gratis-analys.html" class="btn btn-primary">Få din gratis analys</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">Svea<span>Digital</span></a>
+        <p>Professionella hemsidor för svenska småföretag.<br />Fast pris. Ingen startavgift. Hela Sverige.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigering</h4>
+        <div class="footer-links">
+          <a href="/#priser">Priser</a>
+          <a href="/#hur">Hur det fungerar</a>
+          <a href="/blogg/">Blogg</a>
+          <a href="/gratis-analys.html">Gratis hemsideanalys</a>
+          <a href="/#kontakt">Kontakt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Kontakt</h4>
+        <div class="footer-links">
+          <a href="mailto:kontakt@sveadigital.se">kontakt@sveadigital.se</a>
+          <span>Hela Sverige, på distans</span>
+          <span>Svar inom 24 timmar</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Svea Digital AB &nbsp;·&nbsp; Alla priser exkl. moms</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
