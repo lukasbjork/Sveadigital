@@ -79,6 +79,8 @@
     ]
   }
   </script>
+  <!-- Umami – cookiefri besöksstatistik -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
 </head>
 <body>
 
@@ -91,7 +93,7 @@
         <a href="#hur">Hur det fungerar</a>
         <a href="blogg/">Blogg</a>
         <a href="gratis-analys.html">Gratis analys</a>
-        <a href="#kontakt" class="btn btn-sm">Boka samtal</a>
+        <a href="#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka samtal</a>
       </nav>
       <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
     </div>
@@ -100,7 +102,7 @@
       <a href="#hur" onclick="toggleMenu()">Hur det fungerar</a>
       <a href="blogg/" onclick="toggleMenu()">Blogg</a>
       <a href="gratis-analys.html" onclick="toggleMenu()">Gratis analys</a>
-      <a href="#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
+      <a href="#kontakt" class="btn" onclick="toggleMenu()" data-umami-event="boka-samtal-mobil">Boka samtal</a>
     </div>
   </header>
 
@@ -111,7 +113,7 @@
       <h1>En professionell hemsida<br />utan krångel — och utan startavgift</h1>
       <p class="hero-sub">Vi bygger, hostar och underhåller din hemsida — du fokuserar på din verksamhet. Fast månadsavgift, inga dolda kostnader.</p>
       <div class="hero-cta">
-        <a href="#kontakt" class="btn btn-primary btn-lg">Boka ett gratis samtal</a>
+        <a href="#kontakt" class="btn btn-primary btn-lg" data-umami-event="boka-samtal-hero">Boka ett gratis samtal</a>
         <a href="#priser" class="btn btn-ghost btn-lg">Se priser</a>
       </div>
       <div class="hero-trial-badge">✓ Prova gratis i 30 dagar — ingen bindning</div>
@@ -176,7 +178,7 @@
           <div class="industry-icon">💼</div>
           <h3>Annat företag?</h3>
           <p>Vi hjälper alla lokala tjänsteföretag. Hör av dig så berättar vi vad vi kan göra för dig.</p>
-          <a href="#kontakt" class="btn btn-primary">Kontakta oss</a>
+          <a href="#kontakt" class="btn btn-primary" data-umami-event="kontakta-oss">Kontakta oss</a>
         </div>
       </div>
     </div>
@@ -202,7 +204,7 @@
             <li><span class="check">✓</span> Hosting &amp; domän ingår</li>
             <li><span class="check">✓</span> Support via e-post</li>
           </ul>
-          <a href="#kontakt" class="btn btn-outline">Kom igång</a>
+          <a href="#kontakt" class="btn btn-outline" data-umami-event="pris-start">Kom igång</a>
         </div>
 
         <!-- VÄX -->
@@ -219,7 +221,7 @@
             <li><span class="check">✓</span> Månadsrapport — du ser exakt vad sidan gör <span class="feature-tag tag--mer">+mer</span></li>
             <li><span class="check">✓</span> Prioriterad support <span class="feature-tag tag--snabbare">snabbare</span></li>
           </ul>
-          <a href="#kontakt" class="btn btn-primary">Kom igång</a>
+          <a href="#kontakt" class="btn btn-primary" data-umami-event="pris-vax">Kom igång</a>
         </div>
 
         <!-- PARTNER -->
@@ -237,7 +239,7 @@
             <li><span class="check">✓</span> Telefon- &amp; prioriterad support <span class="feature-tag tag--snabbare">snabbare</span></li>
           </ul>
           <p class="plan-tagline" style="margin-top:12px;font-size:13px;">Vi tar emot ett begränsat antal partnerkunder. Boka ett samtal så ser vi om det passar.</p>
-          <a href="#kontakt" class="btn btn-outline">Ansök om partnerskap</a>
+          <a href="#kontakt" class="btn btn-outline" data-umami-event="pris-partner">Ansök om partnerskap</a>
         </div>
 
       </div>
@@ -318,7 +320,7 @@
         </ul>
         <div class="contact-direct">
           <p>Eller hör av dig direkt:</p>
-          <a href="mailto:kontakt@sveadigital.se" class="contact-link">kontakt@sveadigital.se</a>
+          <a href="mailto:kontakt@sveadigital.se" class="contact-link" data-umami-event="mejl">kontakt@sveadigital.se</a>
         </div>
       </div>
       <form class="contact-form" onsubmit="handleSubmit(event)">
@@ -371,7 +373,7 @@
       <div class="footer-col">
         <h4 class="footer-heading">Kontakt</h4>
         <div class="footer-links">
-          <a href="mailto:kontakt@sveadigital.se">kontakt@sveadigital.se</a>
+          <a href="mailto:kontakt@sveadigital.se" data-umami-event="mejl-footer">kontakt@sveadigital.se</a>
           <span>Hela Sverige, på distans</span>
           <span>Svar inom 24 timmar</span>
         </div>
@@ -414,6 +416,7 @@
         });
         const data = await response.json();
         if (data.success) {
+          if (window.umami) { try { await umami.track('lead-formular'); } catch (_) {} }
           window.location.href = 'tack.html';
         } else {
           throw new Error(data.message);

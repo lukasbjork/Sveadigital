@@ -67,6 +67,8 @@
       border-top: 1px solid #e2e8f0;
     }
   </style>
+  <!-- Umami – cookiefri besöksstatistik -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
 </head>
 <body>
 
@@ -77,14 +79,14 @@
       <nav class="nav-links">
         <a href="/#priser">Priser</a>
         <a href="/#hur">Hur det fungerar</a>
-        <a href="/#kontakt" class="btn btn-sm">Boka samtal</a>
+        <a href="/#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka samtal</a>
       </nav>
       <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="/#priser" onclick="toggleMenu()">Priser</a>
       <a href="/#hur" onclick="toggleMenu()">Hur det fungerar</a>
-      <a href="/#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
+      <a href="/#kontakt" class="btn" onclick="toggleMenu()" data-umami-event="boka-samtal-mobil">Boka samtal</a>
     </div>
   </header>
 

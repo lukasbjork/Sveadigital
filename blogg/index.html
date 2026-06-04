@@ -139,6 +139,8 @@
       .blogg-cta { padding: 28px 20px; }
     }
   </style>
+  <!-- Umami – cookiefri besöksstatistik -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
 </head>
 <body>
 
@@ -151,7 +153,7 @@
         <a href="/#hur">Hur det fungerar</a>
         <a href="/blogg/">Blogg</a>
         <a href="/gratis-analys.html">Gratis analys</a>
-        <a href="/#kontakt" class="btn btn-sm">Boka samtal</a>
+        <a href="/#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka samtal</a>
       </nav>
       <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
     </div>
@@ -160,7 +162,7 @@
       <a href="/#hur" onclick="toggleMenu()">Hur det fungerar</a>
       <a href="/blogg/" onclick="toggleMenu()">Blogg</a>
       <a href="/gratis-analys.html" onclick="toggleMenu()">Gratis analys</a>
-      <a href="/#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
+      <a href="/#kontakt" class="btn" onclick="toggleMenu()" data-umami-event="boka-samtal-mobil">Boka samtal</a>
     </div>
   </header>
 

@@ -164,6 +164,8 @@
       .radio-group { flex-direction: column; }
     }
   </style>
+  <!-- Umami – cookiefri besöksstatistik -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
 </head>
 <body>
 
@@ -174,14 +176,14 @@
       <nav class="nav-links">
         <a href="/#priser">Priser</a>
         <a href="/#hur">Hur det fungerar</a>
-        <a href="/#kontakt" class="btn btn-sm">Boka samtal</a>
+        <a href="/#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka samtal</a>
       </nav>
       <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="/#priser" onclick="toggleMenu()">Priser</a>
       <a href="/#hur" onclick="toggleMenu()">Hur det fungerar</a>
-      <a href="/#kontakt" class="btn" onclick="toggleMenu()">Boka samtal</a>
+      <a href="/#kontakt" class="btn" onclick="toggleMenu()" data-umami-event="boka-samtal-mobil">Boka samtal</a>
     </div>
   </header>
 
@@ -293,7 +295,7 @@
       <div class="footer-col">
         <h4 class="footer-heading">Kontakt</h4>
         <div class="footer-links">
-          <a href="mailto:kontakt@sveadigital.se">kontakt@sveadigital.se</a>
+          <a href="mailto:kontakt@sveadigital.se" data-umami-event="mejl-footer">kontakt@sveadigital.se</a>
           <span>Hela Sverige, på distans</span>
           <span>Svar inom 24 timmar</span>
         </div>
@@ -330,6 +332,7 @@
         });
         const data = await response.json();
         if (data.success) {
+          if (window.umami) { try { await umami.track('lead-analys'); } catch (_) {} }
           window.location.href = 'tack.html';
         } else {
           throw new Error(data.message);
