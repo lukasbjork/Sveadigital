@@ -1,0 +1,52 @@
+name: Månadsrapport (Umami)
+
+# Kör den 1:a varje månad 06:17 UTC (~08:17 svensk sommartid) och sammanfattar
+# föregående månad. Kan även köras manuellt via "Run workflow" för test.
+on:
+  schedule:
+    - cron: "17 6 1 * *"
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Rapportmånad YYYY-MM (lämna tom = föregående månad)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write  # behövs för att committa reports/-filen
+
+concurrency:
+  group: monthly-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checka ut repot
+        uses: actions/checkout@v4
+
+      - name: Sätt upp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generera och mejla rapport
+        env:
+          UMAMI_API_KEY: ${{ secrets.UMAMI_API_KEY }}
+          UMAMI_WEBSITE_ID: bc0ebba3-a1f1-4047-b0be-d72153b63645
+          WEB3FORMS_ACCESS_KEY: 053d196a-f3f0-4b51-a1f1-504b00f67195
+          REPORT_MONTH: ${{ github.event.inputs.month }}
+        run: python tools/umami_monthly_report.py
+
+      - name: Committa rapportfilen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/
+          if git diff --staged --quiet; then
+            echo "Inga nya rapportfiler att committa."
+          else
+            git commit -m "Månadsrapport $(date -u +%Y-%m) [skip ci]"
+            git push
+          fi

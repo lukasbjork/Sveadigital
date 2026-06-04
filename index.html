@@ -114,7 +114,7 @@
       <p class="hero-sub">Vi bygger, hostar och underhåller din hemsida — du fokuserar på din verksamhet. Fast månadsavgift, inga dolda kostnader.</p>
       <div class="hero-cta">
         <a href="#kontakt" class="btn btn-primary btn-lg" data-umami-event="boka-samtal-hero">Boka ett gratis samtal</a>
-        <a href="#priser" class="btn btn-ghost btn-lg">Se priser</a>
+        <a href="#priser" class="btn btn-ghost btn-lg" data-umami-event="se-priser">Se priser</a>
       </div>
       <div class="hero-trial-badge">✓ Prova gratis i 30 dagar — ingen bindning</div>
       <p class="hero-note">Hela Sverige &nbsp;·&nbsp; Svar inom 24 h</p>
@@ -399,6 +399,16 @@
         }
       });
     });
+
+    // Scroll-djup: avfyra en gång när besökaren nått botten (läst hela sidan)
+    (function () {
+      var fired = false;
+      window.addEventListener('scroll', function () {
+        if (fired) return;
+        var pos = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+        if (pos >= 0.9) { fired = true; if (window.umami) umami.track('scroll-botten'); }
+      }, { passive: true });
+    })();
 
     async function handleSubmit(e) {
       e.preventDefault();

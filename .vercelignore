@@ -1,0 +1,4 @@
+# Filer som INTE ska publiceras på den live-hostade sajten (Vercel),
+# men som ändå finns i GitHub-repot.
+reports/
+tools/
