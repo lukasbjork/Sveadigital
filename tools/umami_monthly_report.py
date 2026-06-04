@@ -21,6 +21,11 @@ from urllib import request, parse, error
 API_BASE = "https://api.umami.is/v1"
 SITE_URL = "https://sveadigital.se"
 
+# Umamis API ligger bakom Cloudflare som blockerar Pythons standard-User-Agent
+# (Error 1010). En vanlig webbläsar-UA krävs för att komma igenom.
+USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+
 API_KEY = os.environ.get("UMAMI_API_KEY", "").strip()
 WEBSITE_ID = os.environ.get(
     "UMAMI_WEBSITE_ID", "bc0ebba3-a1f1-4047-b0be-d72153b63645"
@@ -84,6 +89,7 @@ def api_get(path, params):
     req = request.Request(url, headers={
         "Accept": "application/json",
         "x-umami-api-key": API_KEY,
+        "User-Agent": USER_AGENT,
     })
     try:
         with request.urlopen(req, timeout=30) as resp:
@@ -205,7 +211,8 @@ def send_email(subject, body):
     }).encode("utf-8")
     req = request.Request(
         "https://api.web3forms.com/submit", data=payload,
-        headers={"Content-Type": "application/json", "Accept": "application/json"},
+        headers={"Content-Type": "application/json", "Accept": "application/json",
+                 "User-Agent": USER_AGENT},
     )
     try:
         with request.urlopen(req, timeout=30) as resp:
