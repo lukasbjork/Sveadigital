@@ -152,6 +152,11 @@ h3 {
   font-family: 'Inter', sans-serif;
 }
 .logo span { color: var(--accent); }
+.logo img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
 
 .nav-links {
   display: flex;
@@ -511,6 +516,12 @@ h3 {
   color: var(--text-muted);
 }
 
+/* Prisrad utan belopp — mindre text, samma radhöjd som beloppen (46px) */
+.plan-price--custom {
+  font-size: 26px;
+  padding: 10px 0;
+}
+
 .plan-tagline {
   font-size: 14px;
   color: var(--text-muted);
@@ -868,8 +879,7 @@ h3 {
   border-bottom: 1px solid var(--navy-mid);
 }
 
-.footer-brand .logo { color: #fff; }
-.footer-brand .logo span { color: var(--accent); }
+.footer-brand .logo img { height: 40px; }
 .footer-brand p {
   font-size: 14px;
   color: rgba(255,255,255,0.38);
@@ -930,6 +940,7 @@ h3 {
 @media (max-width: 700px) {
   .nav-links { display: none; }
   .hamburger { display: block; }
+  .logo img { height: 30px; }
   .section { padding: 64px 0; }
   .hero { padding: 72px 0 56px; }
   .steps { flex-direction: column; align-items: center; gap: 24px; }
