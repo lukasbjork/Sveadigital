@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menyn på hemsidan — så gör du den sökbar och säljande — Svea Digital</title>
+  <meta name="description" content="PDF-menyn stoppar hungriga gäster i mobilen. Så lägger du restaurangens meny som text på hemsidan — struktur, beskrivningar, allergier och dagens lunch." />
+  <link rel="canonical" href="https://sveadigital.se/blogg/meny-pa-hemsidan-restaurang" />
+  <meta property="og:title" content="Menyn på hemsidan — så gör du den sökbar och säljande" />
+  <meta property="og:description" content="PDF-menyn stoppar hungriga gäster i mobilen. Så lägger du restaurangens meny som text på hemsidan — struktur, beskrivningar, allergier och dagens lunch." />
+  <meta property="og:url" content="https://sveadigital.se/blogg/meny-pa-hemsidan-restaurang" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Svea Digital" />
+  <meta property="og:image" content="https://sveadigital.se/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Svea Digital — professionella hemsidor för svenska småföretag" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Menyn på hemsidan — så gör du den sökbar och säljande" />
+  <meta name="twitter:description" content="PDF-menyn stoppar hungriga gäster i mobilen. Så lägger du restaurangens meny som text på hemsidan — struktur, beskrivningar, allergier och dagens lunch." />
+  <meta name="twitter:image" content="https://sveadigital.se/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Menyn på hemsidan — så gör du den sökbar och säljande",
+    "description": "PDF-menyn stoppar hungriga gäster i mobilen. Så lägger du restaurangens meny som text på hemsidan — struktur, beskrivningar, allergier och dagens lunch.",
+    "datePublished": "2026-06-22",
+    "dateModified": "2026-06-22",
+    "author": {"@type": "Organization", "name": "Svea Digital AB"},
+    "publisher": {"@type": "Organization", "name": "Svea Digital AB", "url": "https://sveadigital.se"}
+  }
+  </script>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    .blog-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      padding: 72px 0 56px;
+    }
+    .blog-hero .badge { margin-bottom: 20px; }
+    .blog-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .blog-hero .meta { font-size: 0.9rem; color: rgba(255,255,255,0.72); }
+    .blog-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+    .blog-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: #0f172a;
+      margin: 48px 0 16px;
+      line-height: 1.3;
+    }
+    .blog-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 32px 0 12px;
+    }
+    .blog-body p { font-size: 1.05rem; line-height: 1.75; color: #334155; margin-bottom: 20px; }
+    .blog-body ul, .blog-body ol { margin: 0 0 20px 24px; }
+    .blog-body li { font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 8px; }
+    .callout {
+      background: #f0fdf4;
+      border-left: 4px solid #0d9488;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .callout p { margin: 0; font-size: 1rem; color: #0f172a; }
+    .vs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      font-size: 0.95rem;
+    }
+    .vs-table th {
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .vs-table th:first-child { background: #f8fafc; color: #64748b; width: 35%; }
+    .vs-table th:nth-child(2) { background: #e8f4ff; color: #1e40af; }
+    .vs-table th:nth-child(3) { background: #fce8f3; color: #9d174d; }
+    .vs-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+    .vs-table td:first-child { color: #64748b; font-size: 0.9rem; }
+    .vs-table tr:last-child td { border-bottom: none; }
+    .yes { color: #15803d; font-weight: 600; }
+    .no { color: #dc2626; font-weight: 600; }
+    .partial { color: #d97706; font-weight: 600; }    .blog-cta {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      margin: 64px 0 0;
+    }
+    .blog-cta h2 { color: #fff; margin: 0 0 12px; font-size: 1.6rem; }
+    .blog-cta p { color: rgba(255,255,255,0.7); margin: 0 0 28px; }
+    @media (max-width: 600px) {
+      .blog-cta { padding: 36px 24px; }
+      .vs-table { font-size: 0.85rem; }
+      .vs-table th, .vs-table td { padding: 10px 12px; }    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- Umami – cookiefri besöksstatistik -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+    <symbol id="i-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.4 8.4a2.1 2.1 0 0 1-3-3L12 9"/><path d="M17.6 6.4 22 10.8"/><path d="m14 5 3-3 5 5-3 3z"/><path d="M9.6 10.6 5.2 6.2"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h1a2 2 0 0 0 2-2V2"/><path d="M6 11v11"/><path d="M17 2v20"/><path d="M21 6c0 3-1.8 5-4 5"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 17.5 17.5"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 2.6 8.5 6.4 4.7 7.8l3.8 1.4 1.4 3.8 1.4-3.8 3.8-1.4-3.8-1.4z"/><path d="m18 10-.9 2.4-2.4.9 2.4.9.9 2.4.9-2.4 2.4-.9-2.4-.9z"/><path d="m6.5 15-.7 1.8-1.8.7 1.8.7.7 1.8.7-1.8 1.8-.7-1.8-.7z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2a10 10 0 0 0 0 20 2.5 2.5 0 0 0 2-4 2.5 2.5 0 0 1 2-4h2a4 4 0 0 0 4-4 10 10 0 0 0-10-8z"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5.5-2 5.5s4.2-.5 5.5-2c.7-.8.7-2.1 0-2.9a2.2 2.2 0 0 0-3.5-.6"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.6-6 11a22 22 0 0 1-4 2"/><path d="M9 12H4s.5-3.3 2-4c1.7-.7 5 0 5 0"/><path d="M12 15v5s3.3-.5 4-2c.7-1.7 0-5 0-5"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M16 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2z"/><path d="M3 14a9 9 0 0 1 18 0"/><path d="M21 19a3 3 0 0 1-3 3h-3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1 1 0 0 1 1.6 0C14.6 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h6"/><path d="m9 15 2 2 4-4"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 2.6a2 2 0 0 0-1.4-.6H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.2 8.2a2 2 0 0 0 2.8 0l7.2-7.2a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.9 5.8a2 2 0 0 1-2.2 0L2 7"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M2.4 21.5h5.2V9.3H2.4zm7.9 0h5.2v-6.6c0-3.5 4.4-3.8 4.4 0v6.6h5.2v-8.4c0-6.7-7-6.5-9.6-3.2V9.3h-5.2z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2"/><path d="M17.5 6.5h.01"/></symbol>
+  </svg>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo" aria-label="Svea Digital — till startsidan">
+        <picture>
+          <source srcset="/svea-logo-navy.webp" type="image/webp" />
+          <img src="/svea-logo-navy.png" alt="Svea Digital" width="71" height="38" />
+        </picture>
+      </a>
+      <nav class="nav-links" aria-label="Huvudmeny">
+        <a href="/tjanster">Tjänster</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/kundcase">Kundcase</a>
+        <a href="/om-oss">Om oss</a>
+        <a href="/blogg/">Blogg</a>
+        <a href="/#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka gratis rådgivning</a>
+      </nav>
+      <button class="hamburger" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/tjanster">Tjänster</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/kundcase">Kundcase</a>
+      <a href="/om-oss">Om oss</a>
+      <a href="/blogg/">Blogg</a>
+      <a href="/gratis-analys">Gratis hemsideanalys</a>
+      <a href="/#kontakt" class="btn btn-primary" data-umami-event="boka-samtal-mobil">Boka gratis rådgivning</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="badge">Restauranger</div>
+      <h1>Menyn på hemsidan — så gör du den sökbar och säljande</h1>
+      <p class="meta">Svea Digital · 22 juni 2026 · 8 min läsning</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="blog-body">
+<p>En PDF är ett utmärkt format för något som ska skrivas ut. Det är ett uselt format för något som ska läsas i en telefon på väg hem från jobbet — och det är där de flesta letar efter mat. Ändå ligger menyn kvar som en nedladdningsbar A4-sida på restaurang efter restaurang: gästen får zooma, dra i sidled och tappa bort vilken rubrik raden hörde till, tills hen backar ut och trycker på nästa träff i listan.</p>
+
+<p>Menyn är den sida gästen faktiskt kom för att se, och på många restaurangsajter är den samtidigt den sämsta. Här går vi igenom hur du lägger menyn som riktig text på hemsidan: hur den struktureras, hur beskrivningarna skrivs så att de säljer utan att bli reklamprosa, hur du hanterar allergier och dagens lunch — och vad strukturerad data gör för hur restaurangen kan visas i sökresultatet.</p>
+
+<h2>Problemet med PDF-menyn är inte att Google är blind</h2>
+
+<p>Ett vanligt argument för att skrota PDF-menyn är att Google inte kan läsa den. Det stämmer inte riktigt. Google skriver själva att de kan indexera innehållet i <a href="https://developers.google.com/search/docs/crawling-indexing/indexable-file-types">de flesta textbaserade filer och vissa dokumentformat</a>, och PDF står med bland formaten som listas. Filen kan alltså mycket väl hamna i sökresultatet, precis som vilken sida som helst.</p>
+
+<p>Problemet är ett annat. PDF:en är ett eget dokument, inte en del av din hemsida. Gästen som klickar hamnar utanför sajten, i en läsare utan dina öppettider, din adress och din bokningsknapp. Du kan inte länka till en enskild rätt, inte märka upp innehållet för sökmotorerna och inte ändra ett pris utan att göra om hela filen. När någon söker efter något du faktiskt serverar är det din sida som borde svara — inte en fil som gästen först måste öppna i en egen läsare.</p>
+
+<h2>PDF-meny eller meny som text — vad som faktiskt skiljer</h2>
+
+<p>Här är skillnaden rad för rad, både ur gästens och ur Googles perspektiv:</p>
+
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th>Aspekt</th>
+          <th>Meny som text</th>
+          <th>PDF-meny</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Läsbar i mobilen utan att zooma</td>
+          <td class="yes">Ja ✓</td>
+          <td class="no">Sällan ✗</td>
+        </tr>
+        <tr>
+          <td>Öppnas direkt på sidan</td>
+          <td class="yes">Ja ✓</td>
+          <td class="no">Nej, i en egen läsare ✗</td>
+        </tr>
+        <tr>
+          <td>Innehållet ligger på din egen sida</td>
+          <td class="yes">Ja ✓</td>
+          <td class="no">Nej, egen fil ✗</td>
+        </tr>
+        <tr>
+          <td>Kan indexeras av Google</td>
+          <td class="yes">Ja ✓</td>
+          <td class="partial">Ja, men som separat fil △</td>
+        </tr>
+        <tr>
+          <td>Går att märka upp med strukturerad data</td>
+          <td class="yes">Ja ✓</td>
+          <td class="no">Nej ✗</td>
+        </tr>
+        <tr>
+          <td>Ändra ett pris eller en rätt</td>
+          <td class="yes">Redigera raden ✓</td>
+          <td class="partial">Nytt dokument varje gång △</td>
+        </tr>
+        <tr>
+          <td>Fungerar med uppläsning och skärmläsare</td>
+          <td class="yes">Ja ✓</td>
+          <td class="partial">Beror på filen △</td>
+        </tr>
+        <tr>
+          <td>Går att länka till en enskild del</td>
+          <td class="yes">Ja ✓</td>
+          <td class="partial">Bara till en sida △</td>
+        </tr>
+      </tbody>
+    </table>
+
+<div class="callout"><p><strong>Bra att veta:</strong> Du behöver inte slänga PDF:en. Många restauranger vill ha en utskrivbar version till personalen eller till bordet. Behåll den gärna — men låt den vara ett komplement, inte den enda vägen till menyn.</p></div>
+
+<h2>Så strukturerar du menyn på sidan</h2>
+
+<p>En meny som text är inte samma sak som en vägg av löpande text. Strukturen är det som gör den läsbar i mobilen — och begriplig för Google:</p>
+
+<ul>
+  <li><strong>En rubrik per kategori.</strong> Förrätter, varmrätter, pizza, efterrätt, dryck. Använd riktiga rubriker i sidan, inte bara fetstil, så kan gästen hoppa direkt till rätt del.</li>
+  <li><strong>En rad per rätt.</strong> Namn, kort beskrivning och pris intill varandra. Gästen ska aldrig behöva leta efter priset i en kolumn längre ner.</li>
+  <li><strong>Priset som text.</strong> Ligger priset i en bild går det varken att söka på, kopiera eller läsa upp — och du får göra en ny bildfil varje gång du justerar med fem kronor.</li>
+  <li><strong>Det du vill sälja högst upp.</strong> Den översta raden i varje kategori är den gästen ser först. Lägg husets rätter där, inte i bokstavsordning.</li>
+  <li><strong>Kort meny på en sida, lång meny uppdelad.</strong> Har du både lunch, à la carte och dryckeslista blir det tre sidor som går att länka var för sig.</li>
+</ul>
+
+<p>Samma grundregler om läsbarhet, laddtid och mobil som i vår <a href="/blogg/checklista-hemsida">checklista över 10 saker din hemsida måste ha</a> gäller förstås även för menyn — den är ingen egen värld.</p>
+
+<h2>Beskrivningar som säljer utan att bli reklamprosa</h2>
+
+<p>Gästen läser en menyrad för att svara på en enda fråga: vad får jag, och vill jag ha det? Beskrivningar som svarar på den frågan säljer. Beskrivningar som mest berömmer köket gör det inte.</p>
+
+<p>"Vår himmelska pasta med husets berömda gräddsås" säger ingenting om vad som ligger på tallriken. "Tagliatelle med långkokt högrev, rödvin och parmesan" säger allt — och lockar dessutom mer, för gästen kan föreställa sig smaken. Skriv innehåll före adjektiv: råvara, tillagning och ursprung när det är värt att nämna.</p>
+
+<ul>
+  <li><strong>En till två rader räcker.</strong> Blir det längre läser ingen, och menyn blir jobbig att skanna igenom.</li>
+  <li><strong>Nämn det som skiljer.</strong> Surdegen, kolgrillen, fisken från västkusten, styrkan på chilin.</li>
+  <li><strong>Var ärlig med storleken.</strong> "Två bitar" och "serveras utan tillbehör" sparar besvikna gäster.</li>
+  <li><strong>Släpp superlativen.</strong> "Stans bästa" är ett påstående gästen inte kan använda till någonting.</li>
+</ul>
+
+<p>Ett enkelt test innan du publicerar: läs raden högt för någon som inte jobbar hos er. Förstår de vad de skulle få på tallriken är beskrivningen klar.</p>
+
+<h2>Allergier — vad du måste kunna ge, och vad som räcker på sidan</h2>
+
+<p>Här handlar det inte om tycke och smak utan om regler. Livsmedelsverket beskriver att information om mat som inte är färdigförpackad — alltså det du serverar — oftast får ges antingen skriftligt eller muntligt. Men väljer du att lämna allergeninformationen muntligt och bara på förfrågan måste det alltid finnas <a href="https://www.livsmedelsverket.se/foretagande-regler-kontroll/regler-for-livsmedelsforetag/information-markning-och-pastaenden/information-om-inte-fardigforpackade-livsmedel/">en särskild upplysning till konsumenten om att informationen finns att få</a> — myndighetens eget exempel är en skylt vid serveringen.</p>
+
+<p>Översatt till menysidan: du måste inte lista varje allergen bakom varje rätt. Men du behöver en tydlig rad om att informationen finns, till exempel "Är det något du inte tål? Säg till oss, så går vi igenom rätten tillsammans." Väljer du att märka rätterna direkt i menyn måste märkningen vara rätt och hållas uppdaterad — en felaktig allergimärkning är sämre än ingen alls, eftersom gästen litar på den.</p>
+
+<div class="callout"><p><strong>Viktigt:</strong> Säljer ni mat på distans — kunden ringer eller beställer på nätet och maten körs hem — gäller mer. Livsmedelsverket skriver att information om allergena ingredienser alltid ska lämnas innan köpet avslutas, och pekar ut en webbsida som ett av sätten att informera konsumenten innan köpet. Ligger den informationen bara i en PDF som ingen öppnar är det värt att se över.</p></div>
+
+<h2>Dagens lunch utan att det blir en börda</h2>
+
+<p>Lunchmenyn faller nästan alltid på samma sak: den kräver arbete varje vecka. Två vanliga lösningar gör det värre. Den ena är en ny PDF varje måndag — ett dokument att skapa, döpa och ladda upp. Den andra är att lunchen bara postas i sociala medier, där den försvinner i flödet efter ett dygn och aldrig syns för den som googlar. Om veckans lunch bara finns i ett inlägg missar du alla som söker, och vi har jämfört <a href="/blogg/hemsida-vs-instagram">hemsida och Instagram som kanaler</a> i en egen guide.</p>
+
+<p>Gör det enkelt i stället:</p>
+
+<ul>
+  <li><strong>En fast sida med samma adress.</strong> Veckans lunch ligger alltid på samma URL, så att gäster kan spara den och Google hitta tillbaka.</li>
+  <li><strong>Ett redigerbart textblock.</strong> Fem rader att skriva över på två minuter, inte ett dokument att byta ut.</li>
+  <li><strong>Skriv ut veckan.</strong> "Vecka 26, 22–26 juni" visar direkt att menyn är aktuell.</li>
+  <li><strong>Rullande schema om ni har det.</strong> Serverar ni samma sak varje tisdag kan hela veckan ligga uppe permanent.</li>
+</ul>
+
+<p>Och det ärliga rådet: klarar ni inte av att uppdatera lunchen varje vecka — ha då ingen lunchsida. En meny från mars som ligger kvar i juni skadar mer än den hjälper, för den lär gästen att inget på sajten går att lita på. Skriv i stället ut pris, tider och att rätterna varierar.</p>
+
+<h2>Vad strukturerad data gör — och inte gör</h2>
+
+<p>Strukturerad data är kod i bakgrunden som beskriver för Google vad sidan handlar om. För en restaurang gäller att den mest specifika typen ska användas — Google skriver rakt ut att du ska använda <a href="https://developers.google.com/search/docs/appearance/structured-data/local-business">den mest specifika underkategorin, till exempel Restaurant</a>. Bland egenskaperna som listas finns en som heter menu, och Googles beskrivning av den är kort: för matställen anges den fullständiga webbadressen till menyn. Där pekar du alltså på din menysida — ännu ett skäl att ha en riktig sida att peka på.</p>
+
+<p>Var samtidigt realistisk om vad det ger. Strukturerad data är ingen garanti för något: Google avgör själv vad som visas, och restaurangkarusellen i sökresultatet är enligt Googles egen dokumentation begränsad till ett litet antal aktörer. Uppmärkningen är grundarbete, inte en genväg. Hur du syns i kartan och jobbar med lokal synlighet i övrigt gick vi igenom i guiden om <a href="/blogg/lokal-seo-restauranger-google-maps">lokal SEO för restauranger på Google Maps</a>, så det upprepar vi inte här. Bordsbokning är också ett eget spår — det löses inte på menysidan.</p>
+
+<h2>Menyn är din viktigaste sida — behandla den som det</h2>
+
+<p>Orkar du bara göra en enda sak med restaurangens hemsida i år: flytta menyn ur PDF:en och lägg den som text. Allt annat i den här guiden — strukturen, beskrivningarna, allergiinformationen, uppmärkningen — bygger på att texten faktiskt finns på sidan.</p>
+
+<p>Det är sällan ett stort jobb. En normalstor meny brukar gå att skriva av på en eftermiddag, och sedan är den enklare att underhålla än filen du hade förut. Gästen på perrongen får sitt svar direkt i stället för att zooma sig igenom en A4-sida, och du slipper undra varför bokningen aldrig kom.</p>
+
+<div class="blog-cta">
+  <h2>Ligger din meny fortfarande som PDF?</h2>
+  <p>Vi går igenom din restaurangsajt och visar vad som stoppar gästen på vägen till bordet. Analysen är gratis och innehåller inget säljsnack.</p>
+  <a href="/gratis-analys" class="btn btn-primary">Få din gratis analys</a>
+</div>
+  </div>
+
+
+        <div class="related">
+          <h2>Relaterade guider</h2>
+          <ul class="related-list">
+            <li><a href="/blogg/lokal-seo-restauranger-google-maps">Lokal SEO för restauranger — kom upp på Google Maps</a></li>
+            <li><a href="/blogg/checklista-hemsida">10 saker din hemsida måste ha (checklista 2026)</a></li>
+            <li><a href="/blogg/hemsida-vs-instagram">Hemsida vs Instagram — vad behöver ditt företag?</a></li>
+            <li><a href="/kundcase/restaurang-hamnen">Kundcase: Restaurang Hamnen — menyn som låg som PDF</a></li>
+          </ul>
+        </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Svea Digital — till startsidan">
+          <picture>
+            <source srcset="/svea-logo.webp" type="image/webp" />
+            <img src="/svea-logo.png" alt="Svea Digital" width="75" height="40" loading="lazy" />
+          </picture>
+        </a>
+        <p>Svea Digital bygger, driftar och optimerar hemsidor för svenska småföretag. Fast månadsavgift, ingen startavgift och support på svenska — så att du kan ägna dig åt din verksamhet istället för åt din webbplats.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Svea Digital på LinkedIn (länk saknas)"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Svea Digital på Facebook (länk saknas)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="Svea Digital på Instagram (länk saknas)"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Innehåll</h2>
+        <div class="footer-links">
+          <a href="/tjanster">Tjänster</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/kundcase">Kundcase</a>
+          <a href="/om-oss">Om oss</a>
+          <a href="/blogg/">Blogg</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Kom igång</h2>
+        <div class="footer-links">
+          <a href="/#priser">Paket</a>
+          <a href="/#process">Så går det till</a>
+          <a href="/gratis-analys">Gratis hemsideanalys</a>
+          <a href="/#faq">Vanliga frågor</a>
+          <a href="/#kontakt">Boka rådgivning</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Kontakt</h2>
+        <div class="footer-links">
+          <a href="mailto:kontakt@sveadigital.se" data-umami-event="mejl-footer">kontakt@sveadigital.se</a>
+          <span>[TELEFONNUMMER]</span>
+          <span>Hela Sverige, på distans</span>
+          <span>Svar inom 24 timmar</span>
+          <span>Org.nr [ORG.NR]</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Svea Digital AB</p>
+      <a href="/integritetspolicy">Integritetspolicy</a>
+      <a href="/integritetspolicy#cookies">Cookies</a>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBIL-CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="/gratis-analys" class="btn btn-outline" data-umami-event="sticky-analys">Gratis analys</a>
+    <a href="/#kontakt" class="btn btn-primary" data-umami-event="sticky-boka">Boka rådgivning</a>
+  </div>
+
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
