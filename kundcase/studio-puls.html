@@ -3,138 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tack för din förfrågan — Svea Digital</title>
-  <meta name="robots" content="noindex" />
+  <title>Studio Puls — kundcase pt &amp; träningsstudio | Svea Digital</title>
+  <meta name="description" content="PT-studio där intresserade hörde av sig, fick ett långt svarsmejl — och sedan försvann. Läs om utmaningen, lösningen och resultatet." />
+  <link rel="canonical" href="https://sveadigital.se/kundcase/studio-puls" />
+
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0f172a" />
-  <link rel="manifest" href="/site.webmanifest">
-  <style>
-    .tack-wrap {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 20px;
+
+  <meta property="og:site_name" content="Svea Digital" />
+  <meta property="og:title" content="Studio Puls — kundcase pt &amp; träningsstudio | Svea Digital" />
+  <meta property="og:description" content="PT-studio där intresserade hörde av sig, fick ett långt svarsmejl — och sedan försvann. Läs om utmaningen, lösningen och resultatet." />
+  <meta property="og:url" content="https://sveadigital.se/kundcase/studio-puls" />
+  <meta property="og:image" content="https://sveadigital.se/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Svea Digital — professionella hemsidor för svenska småföretag" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Studio Puls — kundcase pt &amp; träningsstudio | Svea Digital" />
+  <meta name="twitter:description" content="PT-studio där intresserade hörde av sig, fick ett långt svarsmejl — och sedan försvann. Läs om utmaningen, lösningen och resultatet." />
+  <meta name="twitter:image" content="https://sveadigital.se/og-image.png" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://sveadigital.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kundcase",
+      "item": "https://sveadigital.se/kundcase"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Studio Puls",
+      "item": "https://sveadigital.se/kundcase/studio-puls"
     }
-    .tack-card {
-      max-width: 560px;
-      width: 100%;
-      text-align: center;
-    }
-    .tack-icon {
-      width: 72px;
-      height: 72px;
-      background: #f0fdf4;
-      border: 2px solid #bbf7d0;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      margin: 0 auto 28px;
-    }
-    .tack-card h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      color: #0f172a;
-      margin-bottom: 16px;
-      line-height: 1.25;
-    }
-    .tack-card p {
-      font-size: 1.05rem;
-      color: #475569;
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-    .tack-steps {
-      background: #f8fafc;
-      border-radius: 14px;
-      padding: 24px 28px;
-      margin: 32px 0;
-      text-align: left;
-    }
-    .tack-steps p {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 14px;
-    }
-    .tack-steps ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin: 0;
-    }
-    .tack-steps li {
-      font-size: 0.97rem;
-      color: #0f172a;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .tack-steps li::before {
-      content: "✓";
-      color: #0d9488;
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .tack-actions {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 36px;
-    }
-    .tack-blog-tip {
-      margin-top: 48px;
-      padding-top: 32px;
-      border-top: 1px solid #e2e8f0;
-    }
-    .tack-blog-tip p {
-      font-size: 0.9rem;
-      color: #64748b;
-      margin-bottom: 16px;
-    }
-    .blog-link-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 16px 20px;
-      text-decoration: none;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .blog-link-card:hover {
-      border-color: #2563eb;
-      box-shadow: 0 4px 16px rgba(37,99,235,0.1);
-    }
-    .blog-link-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .blog-link-text strong {
-      display: block;
-      font-size: 0.95rem;
-      color: #0f172a;
-      margin-bottom: 2px;
-    }
-    .blog-link-text span {
-      font-size: 0.85rem;
-      color: #64748b;
-    }
-  </style>
+  ]
+}
+  </script>
+
   <script>document.documentElement.classList.add('js');</script>
   <!-- Umami – cookiefri besöksstatistik -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
@@ -204,44 +129,100 @@
   </header>
 
   <main id="main">
-
-
-  <div class="tack-wrap">
-    <div class="tack-card">
-
-      <div class="tack-icon">✓</div>
-
-      <h1>Tack — vi har tagit emot din förfrågan!</h1>
-      <p>Vi återkommer till dig inom <strong>24 timmar</strong> med svar och nästa steg.</p>
-
-      <div class="tack-steps">
-        <p>Vad händer nu?</p>
-        <ul>
-          <li>Vi läser igenom din förfrågan och förbereder oss</li>
-          <li>Du får ett e-postmeddelande med bekräftelse och tid för samtal</li>
-          <li>Vi pratar 20 minuter och tar reda på exakt vad du behöver</li>
-        </ul>
+    <section class="case-hero">
+      <div class="container">
+      <nav class="breadcrumb" aria-label="Brödsmulor">
+        <ol>
+          <li><a href="/">Start</a></li>
+          <li><a href="/kundcase">Kundcase</a></li>
+          <li><span aria-current="page">Studio Puls</span></li>
+        </ol>
+      </nav>
+        <p class="badge">PT &amp; träningsstudio · Malmö · Exempelprojekt</p>
+        <h1>Studio Puls</h1>
+        <p>PT-studio där intresserade hörde av sig, fick ett långt svarsmejl — och sedan försvann.</p>
       </div>
+    </section>
 
-      <div class="tack-actions">
-        <a href="/" class="btn btn-outline">Tillbaka till startsidan</a>
-        <a href="/blogg/" class="btn btn-primary">Läs våra guider</a>
-      </div>
+    <section class="section">
+      <div class="container container--narrow">
 
-      <div class="tack-blog-tip">
-        <p>Medan du väntar — vår mest lästa guide:</p>
-        <a href="/blogg/vad-kostar-en-hemsida-2026" class="blog-link-card">
-          <div class="blog-link-icon">📖</div>
-          <div class="blog-link-text">
-            <strong>Vad kostar en hemsida 2026?</strong>
-            <span>Komplett guide med riktiga priser · 7 min läsning</span>
+        <p class="placeholder-note" style="margin-bottom:var(--space-12)">Det här är ett <strong>exempelprojekt</strong> — en sida vi byggt för att visa hur vi arbetar i den här branschen, inte ett uppdrag åt en verklig kund. Resonemanget är äkta; siffrorna och citatet längre ner är markerade platshållare.</p>
+
+        <figure class="case-figure reveal">
+          <img src="/assets/portfolio/studio-puls-desktop.webp" alt="Studio Puls startsida i en dator: rubrik om personlig träning, upplägg och provpass." width="900" height="563" loading="lazy" decoding="async" />
+          <figcaption>Studio Puls — startsidan i datorvy. <a href="/showcase/pt-studio-puls.html" target="_blank" rel="noopener">Öppna sidan i ett nytt fönster</a></figcaption>
+        </figure>
+
+        <article class="case-block reveal">
+          <h2>Utmaningen</h2>
+          <p>Studion hade tre olika upplägg men inget av dem fanns beskrivet någonstans. Den som var nyfiken fick mejla, vänta ett dygn och sedan läsa ett långt svar med priser och alternativ. Många svarade aldrig tillbaka — inte för att de tappat intresset, utan för att beslutet hann kännas jobbigt.</p>
+        </article>
+
+        <article class="case-block reveal">
+          <h2>Lösningen</h2>
+          <ul>
+            <li>De tre uppläggen ställdes bredvid varandra med pris, innehåll och vem de passar för.</li>
+            <li>Ett veckoschema med antal lediga platser per pass, så att man ser att det finns plats.</li>
+            <li>Ett provpassformulär på tre fält — namn, telefon och vilket upplägg man lutar åt.</li>
+            <li>Ett tydligt löfte om att ingen ringer upp i efterhand, vilket är den vanligaste anledningen till att folk inte hör av sig.</li>
+          </ul>
+        </article>
+
+        <article class="case-block reveal">
+          <h2>Resultatet</h2>
+          <p>Den som är intresserad kan gå från nyfiken till bokat provpass på under en minut, utan att vänta på ett mejlsvar. Priserna finns framme, vilket sorterar bort samtalen som ändå inte skulle lett någonstans.</p>
+
+          <div class="result-grid">
+            <div class="result-item is-placeholder">
+              <span class="placeholder-tag">Platshållare</span>
+              <strong>[+XX %]</strong>
+              <span>Fler förfrågningar via sidan</span>
+            </div>
+            <div class="result-item is-placeholder">
+              <span class="placeholder-tag">Platshållare</span>
+              <strong>[XX]</strong>
+              <span>Placering på viktigaste sökordet</span>
+            </div>
+            <div class="result-item is-placeholder">
+              <span class="placeholder-tag">Platshållare</span>
+              <strong>[X,X s]</strong>
+              <span>Laddtid i mobilen</span>
+            </div>
           </div>
-        </a>
+          <p style="font-size:14px;color:var(--text-muted)">Siffrorna fylls i med uppmätta värden när det finns ett skarpt projekt att redovisa. Vi publicerar inga resultat vi inte kan belägga.</p>
+        </article>
+
+        <figure class="quote-card is-placeholder reveal">
+          <span class="placeholder-tag">Kundcitat saknas</span>
+          <blockquote>”[Här står vad kunden själv tyckte om samarbetet och resultatet. Ersätt med ett riktigt citat — vi publicerar inga påhittade omdömen.]”</blockquote>
+          <figcaption>[Kundens namn], [roll] på Studio Puls</figcaption>
+        </figure>
+
+        <div class="work-actions" style="padding:0">
+          <a class="btn btn-dark" href="/showcase/pt-studio-puls.html" target="_blank" rel="noopener" data-umami-event="case-demo-studio-puls">Öppna sidan</a>
+          <a class="btn btn-outline" href="/kundcase">Se alla kundcase</a>
+        </div>
+
+        <div class="related">
+          <h2>Läs vidare</h2>
+          <ul class="related-list">
+            <li><a href="/blogg/hemsida-vs-instagram">Hemsida vs Instagram — vad behöver ditt företag?</a></li>
+            <li><a href="/portfolio">Se alla sex projekt i portfolion</a></li>
+            <li><a href="/tjanster">Så jobbar vi med olika branscher</a></li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-
+    <section class="section section--alt">
+      <div class="container">
+        <div class="cta-strip reveal">
+          <p>Driver du något liknande Studio Puls?<span>Ta ett kostnadsfritt samtal på 20 minuter så berättar vi vad vi skulle göra i ditt fall.</span></p>
+          <a href="/#kontakt" class="btn btn-primary" data-umami-event="cta-case-studio-puls">Boka gratis rådgivning</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -304,7 +285,6 @@
     <a href="/gratis-analys" class="btn btn-outline" data-umami-event="sticky-analys">Gratis analys</a>
     <a href="/#kontakt" class="btn btn-primary" data-umami-event="sticky-boka">Boka rådgivning</a>
   </div>
-
 
   <script src="/main.js" defer></script>
 </body>

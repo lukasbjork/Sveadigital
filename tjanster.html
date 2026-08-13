@@ -3,138 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tack för din förfrågan — Svea Digital</title>
-  <meta name="robots" content="noindex" />
+  <title>Tjänster — hemsidor för lokala tjänsteföretag | Svea Digital</title>
+  <meta name="description" content="Vi bygger hemsidor för frisörer, hantverkare, restauranger, träningsföretag och städfirmor. Allt ingår i en fast månadsavgift, utan startavgift." />
+  <link rel="canonical" href="https://sveadigital.se/tjanster" />
+
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0f172a" />
-  <link rel="manifest" href="/site.webmanifest">
-  <style>
-    .tack-wrap {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 20px;
+
+  <meta property="og:site_name" content="Svea Digital" />
+  <meta property="og:title" content="Tjänster — hemsidor för lokala tjänsteföretag | Svea Digital" />
+  <meta property="og:description" content="Vi bygger hemsidor för frisörer, hantverkare, restauranger, träningsföretag och städfirmor. Allt ingår i en fast månadsavgift, utan startavgift." />
+  <meta property="og:url" content="https://sveadigital.se/tjanster" />
+  <meta property="og:image" content="https://sveadigital.se/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Svea Digital — professionella hemsidor för svenska småföretag" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tjänster — hemsidor för lokala tjänsteföretag | Svea Digital" />
+  <meta name="twitter:description" content="Vi bygger hemsidor för frisörer, hantverkare, restauranger, träningsföretag och städfirmor. Allt ingår i en fast månadsavgift, utan startavgift." />
+  <meta name="twitter:image" content="https://sveadigital.se/og-image.png" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://sveadigital.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tjänster",
+      "item": "https://sveadigital.se/tjanster"
     }
-    .tack-card {
-      max-width: 560px;
-      width: 100%;
-      text-align: center;
-    }
-    .tack-icon {
-      width: 72px;
-      height: 72px;
-      background: #f0fdf4;
-      border: 2px solid #bbf7d0;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      margin: 0 auto 28px;
-    }
-    .tack-card h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      color: #0f172a;
-      margin-bottom: 16px;
-      line-height: 1.25;
-    }
-    .tack-card p {
-      font-size: 1.05rem;
-      color: #475569;
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-    .tack-steps {
-      background: #f8fafc;
-      border-radius: 14px;
-      padding: 24px 28px;
-      margin: 32px 0;
-      text-align: left;
-    }
-    .tack-steps p {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 14px;
-    }
-    .tack-steps ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin: 0;
-    }
-    .tack-steps li {
-      font-size: 0.97rem;
-      color: #0f172a;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .tack-steps li::before {
-      content: "✓";
-      color: #0d9488;
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .tack-actions {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 36px;
-    }
-    .tack-blog-tip {
-      margin-top: 48px;
-      padding-top: 32px;
-      border-top: 1px solid #e2e8f0;
-    }
-    .tack-blog-tip p {
-      font-size: 0.9rem;
-      color: #64748b;
-      margin-bottom: 16px;
-    }
-    .blog-link-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 16px 20px;
-      text-decoration: none;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .blog-link-card:hover {
-      border-color: #2563eb;
-      box-shadow: 0 4px 16px rgba(37,99,235,0.1);
-    }
-    .blog-link-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .blog-link-text strong {
-      display: block;
-      font-size: 0.95rem;
-      color: #0f172a;
-      margin-bottom: 2px;
-    }
-    .blog-link-text span {
-      font-size: 0.85rem;
-      color: #64748b;
-    }
-  </style>
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Webbutveckling och webbdesign för småföretag",
+  "provider": {
+    "@type": "Organization",
+    "name": "Svea Digital AB",
+    "url": "https://sveadigital.se/"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Sverige"
+  },
+  "description": "Design, utveckling, hosting, lokal SEO och löpande support för lokala tjänsteföretag i Sverige.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Branschanpassade hemsidor",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hemsida för frisörer och salonger"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hemsida för hantverkare"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hemsida för restauranger och caféer"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hemsida för PT och träningsstudios"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hemsida för städföretag"
+        }
+      }
+    ]
+  }
+}
+  </script>
+
   <script>document.documentElement.classList.add('js');</script>
   <!-- Umami – cookiefri besöksstatistik -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
@@ -204,44 +181,121 @@
   </header>
 
   <main id="main">
-
-
-  <div class="tack-wrap">
-    <div class="tack-card">
-
-      <div class="tack-icon">✓</div>
-
-      <h1>Tack — vi har tagit emot din förfrågan!</h1>
-      <p>Vi återkommer till dig inom <strong>24 timmar</strong> med svar och nästa steg.</p>
-
-      <div class="tack-steps">
-        <p>Vad händer nu?</p>
-        <ul>
-          <li>Vi läser igenom din förfrågan och förbereder oss</li>
-          <li>Du får ett e-postmeddelande med bekräftelse och tid för samtal</li>
-          <li>Vi pratar 20 minuter och tar reda på exakt vad du behöver</li>
-        </ul>
+    <section class="case-hero">
+      <div class="container">
+      <nav class="breadcrumb" aria-label="Brödsmulor">
+        <ol>
+          <li><a href="/">Start</a></li>
+          <li><span aria-current="page">Tjänster</span></li>
+        </ol>
+      </nav>
+        <h1>Vi bygger inte hemsidor i allmänhet</h1>
+        <p>Vi bygger sidor för lokala tjänsteföretag. Det betyder att vi vet vad din kund letar efter, i vilken ordning hon letar efter det, och vad som får henne att höra av sig istället för att gå vidare till nästa träff.</p>
       </div>
+    </section>
 
-      <div class="tack-actions">
-        <a href="/" class="btn btn-outline">Tillbaka till startsidan</a>
-        <a href="/blogg/" class="btn btn-primary">Läs våra guider</a>
+    <section class="section">
+      <div class="container container--narrow">
+        <article class="case-block reveal" id="frisorer">
+          <span class="industry-icon" style="margin-bottom:var(--space-5)"><svg aria-hidden="true"><use href="#i-scissors"/></svg></span>
+          <h2>Hemsida för frisörer och salonger</h2>
+          <p>Din kund vill veta tre saker innan hon bokar: vad det kostar, hur lång tid det tar och om du har en tid som passar. Vi bygger sidan så att alla tre svaren finns innan hon behöver fråga — och så att bokningen sker på sidan istället för i din inkorg klockan elva på kvällen.</p>
+          <ul>
+            <li>Behandlingar med pris och tidsåtgång</li>
+            <li>Bokningsflöde utan konton och lösenord</li>
+            <li>Bilder på ditt arbete istället för stockfoton</li>
+            <li>Synlighet på sökningar som "frisör" plus din stadsdel</li>
+          </ul>
+        </article>
+
+        <article class="case-block reveal" id="hantverkare">
+          <span class="industry-icon" style="margin-bottom:var(--space-5)"><svg aria-hidden="true"><use href="#i-hammer"/></svg></span>
+          <h2>Hemsida för hantverkare</h2>
+          <p>Det som avgör om du får jobbet är sällan priset — det är om kunden tror att du kommer dyka upp och göra det ordentligt. Vi bygger sidan runt dina referensprojekt och ett offertformulär som frågar efter rätt saker, så att du kan svara med ett pris istället för med ett telefonsamtal.</p>
+          <ul>
+            <li>En sida per typ av arbete du utför</li>
+            <li>Referensprojekt med omfattning och tidsåtgång</li>
+            <li>ROT-information med räkneexempel</li>
+            <li>Offertformulär som ger dig underlag att prissätta direkt</li>
+          </ul>
+        </article>
+
+        <article class="case-block reveal" id="restauranger">
+          <span class="industry-icon" style="margin-bottom:var(--space-5)"><svg aria-hidden="true"><use href="#i-utensils"/></svg></span>
+          <h2>Hemsida för restauranger och caféer</h2>
+          <p>Nästan alla som letar efter ett ställe att äta på gör det i mobilen, ofta stående på en gata. Menyn måste gå att läsa med tummen, öppettiderna måste stämma och vägbeskrivningen ska vara ett klick bort. En meny i PDF-format kostar dig gäster varje kväll.</p>
+          <ul>
+            <li>Meny som text — läsbar i mobilen och sökbar för Google</li>
+            <li>Öppettider och adress överst där folk letar</li>
+            <li>Bordsbokning direkt på sidan</li>
+            <li>Strukturerad data så att Google kan visa öppettiderna</li>
+          </ul>
+        </article>
+
+        <article class="case-block reveal" id="traning">
+          <span class="industry-icon" style="margin-bottom:var(--space-5)"><svg aria-hidden="true"><use href="#i-dumbbell"/></svg></span>
+          <h2>Hemsida för PT och träningsstudios</h2>
+          <p>Den som funderar på att börja träna gör det oftast på en impuls som inte håller särskilt länge. Ju fler steg mellan intresse och bokat provpass, desto fler tappar du. Vi kortar avståndet till ett formulär med tre fält.</p>
+          <ul>
+            <li>Upplägg och priser ställda bredvid varandra</li>
+            <li>Schema med lediga platser per pass</li>
+            <li>Provpassbokning på under en minut</li>
+            <li>Tydligt besked om vad som händer efter bokningen</li>
+          </ul>
+        </article>
+
+        <article class="case-block reveal" id="stadforetag">
+          <span class="industry-icon" style="margin-bottom:var(--space-5)"><svg aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+          <h2>Hemsida för städföretag</h2>
+          <p>De flesta förfrågningar till en städfirma handlar om samma sak: vad kostar det, och hur fungerar RUT? Att svara på det manuellt varje gång tar timmar i veckan. Står svaret på sidan hör bara de av sig som redan accepterat priset.</p>
+          <ul>
+            <li>Prisexempel per bostadsstorlek efter RUT</li>
+            <li>Förklaring av hur avdraget dras på fakturan</li>
+            <li>Formulär som fångar storlek och önskad frekvens</li>
+            <li>Garantier och försäkringar tydligt framme</li>
+          </ul>
+        </article>
       </div>
+    </section>
 
-      <div class="tack-blog-tip">
-        <p>Medan du väntar — vår mest lästa guide:</p>
-        <a href="/blogg/vad-kostar-en-hemsida-2026" class="blog-link-card">
-          <div class="blog-link-icon">📖</div>
-          <div class="blog-link-text">
-            <strong>Vad kostar en hemsida 2026?</strong>
-            <span>Komplett guide med riktiga priser · 7 min läsning</span>
-          </div>
-        </a>
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Ingår alltid</p>
+          <h2>Samma grund oavsett bransch</h2>
+          <p class="section-sub">Vad du än driver får du samma tekniska fundament — det är där skillnaden mellan en sida som syns och en som inte gör det sitter.</p>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-item reveal"><svg aria-hidden="true"><use href="#i-rocket"/></svg><div><strong>Snabb laddning</strong><span>Sidor som laddar direkt, även på mobilnät.</span></div></div>
+          <div class="trust-item reveal reveal-delay-1"><svg aria-hidden="true"><use href="#i-search"/></svg><div><strong>Teknisk SEO</strong><span>Rubrikstruktur, strukturerad data och en sitemap som stämmer.</span></div></div>
+          <div class="trust-item reveal reveal-delay-2"><svg aria-hidden="true"><use href="#i-lock"/></svg><div><strong>SSL och säker drift</strong><span>Kryptering, uppdateringar och daglig säkerhetskopiering.</span></div></div>
+          <div class="trust-item reveal reveal-delay-3"><svg aria-hidden="true"><use href="#i-globe"/></svg><div><strong>Fungerar för alla</strong><span>Tillgänglig även för den som zoomar eller använder skärmläsare.</span></div></div>
+          <div class="trust-item reveal"><svg aria-hidden="true"><use href="#i-file"/></svg><div><strong>GDPR från början</strong><span>Integritetspolicy och laglig hantering av formulärsvar.</span></div></div>
+          <div class="trust-item reveal reveal-delay-1"><svg aria-hidden="true"><use href="#i-headset"/></svg><div><strong>Löpande support</strong><span>Textändringar och justeringar utan extra faktura.</span></div></div>
+          <div class="trust-item reveal reveal-delay-2"><svg aria-hidden="true"><use href="#i-tag"/></svg><div><strong>Ingen startavgift</strong><span>Du betalar en fast månadsavgift, inget stort belopp i förskott.</span></div></div>
+          <div class="trust-item reveal reveal-delay-3"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><strong>Klar på 14 dagar</strong><span>Från att vi fått ditt material till publicerad sida.</span></div></div>
+        </div>
+
+        <div class="cta-strip reveal">
+          <p>Osäker på vad du behöver?<span>Berätta vad du driver så säger vi rakt ut vad som är värt att göra — och vad som inte är det.</span></p>
+          <a href="/#kontakt" class="btn btn-primary" data-umami-event="cta-tjanster">Boka gratis rådgivning</a>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Se det i praktiken</p>
+          <h2>Så ser det ut när det är klart</h2>
+          <p class="section-sub">Sex exempelprojekt i olika branscher — riktiga sidor du kan klicka runt i.</p>
+        </div>
+        <div style="text-align:center">
+          <a href="/portfolio" class="btn btn-dark btn-lg" data-umami-event="tjanster-till-portfolio">Se portfolion</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -304,7 +358,6 @@
     <a href="/gratis-analys" class="btn btn-outline" data-umami-event="sticky-analys">Gratis analys</a>
     <a href="/#kontakt" class="btn btn-primary" data-umami-event="sticky-boka">Boka rådgivning</a>
   </div>
-
 
   <script src="/main.js" defer></script>
 </body>

@@ -3,138 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tack för din förfrågan — Svea Digital</title>
-  <meta name="robots" content="noindex" />
+  <title>Om Svea Digital — så arbetar vi | Svea Digital</title>
+  <meta name="description" content="Svea Digital bygger, driftar och optimerar hemsidor för svenska småföretag. Så här arbetar vi, och det här kan du förvänta dig av ett samarbete med oss." />
+  <link rel="canonical" href="https://sveadigital.se/om-oss" />
+
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0f172a" />
-  <link rel="manifest" href="/site.webmanifest">
-  <style>
-    .tack-wrap {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 20px;
+
+  <meta property="og:site_name" content="Svea Digital" />
+  <meta property="og:title" content="Om Svea Digital — så arbetar vi | Svea Digital" />
+  <meta property="og:description" content="Svea Digital bygger, driftar och optimerar hemsidor för svenska småföretag. Så här arbetar vi, och det här kan du förvänta dig av ett samarbete med oss." />
+  <meta property="og:url" content="https://sveadigital.se/om-oss" />
+  <meta property="og:image" content="https://sveadigital.se/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Svea Digital — professionella hemsidor för svenska småföretag" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Om Svea Digital — så arbetar vi | Svea Digital" />
+  <meta name="twitter:description" content="Svea Digital bygger, driftar och optimerar hemsidor för svenska småföretag. Så här arbetar vi, och det här kan du förvänta dig av ett samarbete med oss." />
+  <meta name="twitter:image" content="https://sveadigital.se/og-image.png" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://sveadigital.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Om oss",
+      "item": "https://sveadigital.se/om-oss"
     }
-    .tack-card {
-      max-width: 560px;
-      width: 100%;
-      text-align: center;
-    }
-    .tack-icon {
-      width: 72px;
-      height: 72px;
-      background: #f0fdf4;
-      border: 2px solid #bbf7d0;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      margin: 0 auto 28px;
-    }
-    .tack-card h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      color: #0f172a;
-      margin-bottom: 16px;
-      line-height: 1.25;
-    }
-    .tack-card p {
-      font-size: 1.05rem;
-      color: #475569;
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-    .tack-steps {
-      background: #f8fafc;
-      border-radius: 14px;
-      padding: 24px 28px;
-      margin: 32px 0;
-      text-align: left;
-    }
-    .tack-steps p {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 14px;
-    }
-    .tack-steps ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin: 0;
-    }
-    .tack-steps li {
-      font-size: 0.97rem;
-      color: #0f172a;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .tack-steps li::before {
-      content: "✓";
-      color: #0d9488;
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .tack-actions {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 36px;
-    }
-    .tack-blog-tip {
-      margin-top: 48px;
-      padding-top: 32px;
-      border-top: 1px solid #e2e8f0;
-    }
-    .tack-blog-tip p {
-      font-size: 0.9rem;
-      color: #64748b;
-      margin-bottom: 16px;
-    }
-    .blog-link-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 16px 20px;
-      text-decoration: none;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .blog-link-card:hover {
-      border-color: #2563eb;
-      box-shadow: 0 4px 16px rgba(37,99,235,0.1);
-    }
-    .blog-link-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .blog-link-text strong {
-      display: block;
-      font-size: 0.95rem;
-      color: #0f172a;
-      margin-bottom: 2px;
-    }
-    .blog-link-text span {
-      font-size: 0.85rem;
-      color: #64748b;
-    }
-  </style>
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Om Svea Digital",
+  "url": "https://sveadigital.se/om-oss",
+  "about": {
+    "@type": "Organization",
+    "name": "Svea Digital AB",
+    "url": "https://sveadigital.se/"
+  }
+}
+  </script>
+
   <script>document.documentElement.classList.add('js');</script>
   <!-- Umami – cookiefri besöksstatistik -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
@@ -204,44 +136,77 @@
   </header>
 
   <main id="main">
-
-
-  <div class="tack-wrap">
-    <div class="tack-card">
-
-      <div class="tack-icon">✓</div>
-
-      <h1>Tack — vi har tagit emot din förfrågan!</h1>
-      <p>Vi återkommer till dig inom <strong>24 timmar</strong> med svar och nästa steg.</p>
-
-      <div class="tack-steps">
-        <p>Vad händer nu?</p>
-        <ul>
-          <li>Vi läser igenom din förfrågan och förbereder oss</li>
-          <li>Du får ett e-postmeddelande med bekräftelse och tid för samtal</li>
-          <li>Vi pratar 20 minuter och tar reda på exakt vad du behöver</li>
-        </ul>
+    <section class="case-hero">
+      <div class="container">
+      <nav class="breadcrumb" aria-label="Brödsmulor">
+        <ol>
+          <li><a href="/">Start</a></li>
+          <li><span aria-current="page">Om oss</span></li>
+        </ol>
+      </nav>
+        <h1>En leverantör som stannar kvar efter lanseringen</h1>
+        <p>De flesta hemsidor blir dåliga inte för att de byggdes fel, utan för att ingen tog hand om dem efteråt. Vi är byggda för det motsatta: ett långt samarbete där sidan blir bättre för varje månad som går.</p>
       </div>
+    </section>
 
-      <div class="tack-actions">
-        <a href="/" class="btn btn-outline">Tillbaka till startsidan</a>
-        <a href="/blogg/" class="btn btn-primary">Läs våra guider</a>
+    <section class="section">
+      <div class="container container--narrow">
+        <article class="case-block reveal">
+          <h2>Vad vi hjälper företag med</h2>
+          <p>Svea Digital bygger, driftar och optimerar hemsidor för svenska småföretag. Vi arbetar med lokala tjänsteföretag — frisörer, hantverkare, restauranger, träningsföretag och städfirmor — där varje besökare som inte hör av sig är en förlorad bokning eller en förlorad offert.</p>
+          <p>Vi tar hand om hela kedjan: design, utveckling, domän, webbhotell, säkerhet, sökmotoroptimering och de löpande ändringar som alltid dyker upp. Du behöver aldrig veta vad ett SSL-certifikat är eller varför det ska förnyas.</p>
+        </article>
+
+        <article class="case-block reveal">
+          <h2>Så arbetar vi</h2>
+          <p>Vi börjar alltid med ett samtal om din verksamhet innan vi säger något om hemsidor. Vad gör du, vem är kunden, vad frågar hon om innan hon bokar? Först när vi förstår det bygger vi något — annars blir sidan bara snygg, inte användbar.</p>
+          <p>Sedan arbetar vi i korta steg. Du får se ett designförslag innan sidan byggs klart, du säger vad du vill ändra, och vi justerar. Ingenting publiceras förrän du har godkänt det. Från att vi fått ditt material tar det normalt 10–14 dagar.</p>
+        </article>
+
+        <article class="case-block reveal">
+          <h2>Kvalitet är inte en känsla</h2>
+          <p>En hemsida kan se bra ut och ändå vara dålig. Vi mäter det som går att mäta: hur snabbt sidan laddar, om den fungerar för någon som använder skärmläsare, om Google kan läsa innehållet, om den ser rätt ut på en fem år gammal telefon.</p>
+          <p>Varje sida vi levererar ska klara samma tekniska krav — snabb laddning, korrekt rubrikstruktur, strukturerad data, tillgänglighet och kryptering. Det är inte tillval, det är utgångsläget.</p>
+        </article>
+
+        <article class="case-block reveal">
+          <h2>Långsiktiga samarbeten framför snabba projekt</h2>
+          <p>Vi tar inte en stor summa i förskott och försvinner. Modellen är en fast månadsavgift utan startavgift, vilket betyder att vi tjänar på att du stannar — och du stannar bara om sidan gör nytta.</p>
+          <p>Det gör också att vi kan säga nej. Om en hemsida inte är rätt investering för dig just nu säger vi det på det första samtalet, istället för att sälja in något du ångrar om ett halvår.</p>
+        </article>
+
+        <article class="case-block reveal">
+          <h2>Kundfokus i praktiken</h2>
+          <p>Du mejlar oss och får svar inom 24 timmar på vardagar. Små ändringar — nya öppettider, en ny bild, ett justerat pris — gör vi normalt samma eller nästa arbetsdag, utan extra faktura. Du pratar med någon som känner till din sida, på svenska.</p>
+          <p>Vi skickar inga automatiska mejl som låtsas vara personliga, och vi ringer inte upp dig i efterhand för att du en gång fyllde i ett formulär.</p>
+        </article>
+
+        <article class="case-block reveal">
+          <h2>Varför företag väljer oss</h2>
+          <ul>
+            <li><strong>Ingen startavgift.</strong> Du behöver inte lägga ut ett stort belopp innan du vet om det fungerar.</li>
+            <li><strong>Allt ingår.</strong> Hosting, domän, säkerhet, uppdateringar och löpande ändringar ryms i månadsavgiften.</li>
+            <li><strong>Vi kan din bransch.</strong> Vi bygger för lokala tjänsteföretag och vet vad deras kunder letar efter.</li>
+            <li><strong>Snabb leverans.</strong> Normalt 10–14 dagar, och din egen insats är ungefär en timme.</li>
+            <li><strong>Inga låsningar utan förklaring.</strong> Villkoren går vi igenom innan du skriver på, inte efteråt.</li>
+          </ul>
+        </article>
+
+        <figure class="quote-card reveal">
+          <blockquote>Vi säger hellre nej till ett uppdrag än levererar något vi inte kan stå för om ett år.</blockquote>
+          <figcaption>Så resonerar vi när vi tar in nya kunder</figcaption>
+        </figure>
       </div>
+    </section>
 
-      <div class="tack-blog-tip">
-        <p>Medan du väntar — vår mest lästa guide:</p>
-        <a href="/blogg/vad-kostar-en-hemsida-2026" class="blog-link-card">
-          <div class="blog-link-icon">📖</div>
-          <div class="blog-link-text">
-            <strong>Vad kostar en hemsida 2026?</strong>
-            <span>Komplett guide med riktiga priser · 7 min läsning</span>
-          </div>
-        </a>
+    <section class="section section--alt">
+      <div class="container">
+        <div class="cta-strip reveal">
+          <p>Låter det som något för dig?<span>Ta ett kostnadsfritt samtal på 20 minuter så får du veta vad vi skulle göra — och vad det skulle kosta.</span></p>
+          <a href="/#kontakt" class="btn btn-primary" data-umami-event="cta-om-oss">Boka gratis rådgivning</a>
+        </div>
       </div>
-
-    </div>
-  </div>
-
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -304,7 +269,6 @@
     <a href="/gratis-analys" class="btn btn-outline" data-umami-event="sticky-analys">Gratis analys</a>
     <a href="/#kontakt" class="btn btn-primary" data-umami-event="sticky-boka">Boka rådgivning</a>
   </div>
-
 
   <script src="/main.js" defer></script>
 </body>

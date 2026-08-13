@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -243,7 +243,7 @@
       <h1>Elektriker du<br />kan lita på</h1>
       <p>Vi utför elinstallationer, felsökning och service för privatpersoner och företag i Göteborg med omnejd. Fast pris, utfört på tid.</p>
       <div class="hero-btns">
-        <a href="tel:031123456" class="btn-orange">Ring 031-123 456</a>
+        <a href="tel:031123456" class="btn-orange">Ring&nbsp;031&#8209;123&nbsp;456</a>
         <a href="#kontakt" class="btn-outline-white">Begär offert</a>
       </div>
     </div>
@@ -304,7 +304,7 @@
       </div>
       <div class="service-card">
         <div class="service-icon">🏢</div>
-        <div class="service-title">Företag & lokal</div>
+        <div class="service-title">Företag &amp; lokal</div>
         <div class="service-desc">Elinstallationer för kontor, restauranger, butiker och industrilokaler.</div>
       </div>
       <div class="service-card">
@@ -353,7 +353,7 @@
         <p>Ring oss direkt för snabb hjälp, eller fyll i formuläret så återkommer vi inom 2 timmar på vardagar.</p>
         <div class="info-row">
           <div class="info-icon">📞</div>
-          <div class="info-text"><a href="tel:031123456"><strong>031-123 456</strong></a><br /><span style="font-size:0.82rem;color:#94a3b8;">Jour vardagar 07–19</span></div>
+          <div class="info-text"><a href="tel:031123456"><strong>031&#8209;123&nbsp;456</strong></a><br /><span style="font-size:0.82rem;color:#94a3b8;">Jour vardagar 07–19</span></div>
         </div>
         <div class="info-row">
           <div class="info-icon">✉️</div>
@@ -368,12 +368,12 @@
           <div class="info-text">Mån–fre 07–17, Jour 07–19</div>
         </div>
       </div>
-      <form>
+      <form onsubmit="event.preventDefault()">
         <div class="form-field"><label>Ditt namn</label><input type="text" placeholder="Erik Lindqvist" /></div>
         <div class="form-field"><label>Telefon</label><input type="tel" placeholder="031-000 000" /></div>
         <div class="form-field"><label>E-post</label><input type="email" placeholder="din@email.se" /></div>
         <div class="form-field"><label>Beskriv uppdraget</label><textarea placeholder="T.ex. behöver ny elcentral i villa, 140 kvm. Göteborg."></textarea></div>
-        <a href="#" class="btn-orange" style="display:block;text-align:center;">Skicka förfrågan</a>
+        <button type="submit" class="btn-orange" style="display:block;text-align:center;;width:100%;border:none;cursor:pointer;font:inherit">Skicka förfrågan</button>
       </form>
     </div>
   </section>

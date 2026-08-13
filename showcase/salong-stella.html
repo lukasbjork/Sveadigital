@@ -8,7 +8,7 @@
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -326,7 +326,7 @@
       </div>
       <div class="service-card">
         <div class="service-icon">💆</div>
-        <div class="service-name">Styling & uppläggning</div>
+        <div class="service-name">Styling &amp; uppläggning</div>
         <div class="service-price">från 500 kr</div>
         <div class="service-desc">Perfekt för bröllop, fest eller event. Inbokning i förväg.</div>
       </div>
@@ -385,14 +385,14 @@
         </div>
         <div class="info-row">
           <div class="info-icon">📞</div>
-          <div class="info-text"><a href="tel:0812345678">08-123 45 67</a></div>
+          <div class="info-text"><a href="tel:0812345678">08&#8209;123&nbsp;45&nbsp;67</a></div>
         </div>
         <div class="info-row">
           <div class="info-icon">🕐</div>
           <div class="info-text">Mån–fre: 09–18<br />Lör: 10–16<br />Sön: Stängt</div>
         </div>
       </div>
-      <form>
+      <form onsubmit="event.preventDefault()">
         <div class="form-field">
           <label>Namn</label>
           <input type="text" placeholder="Anna Svensson" />
@@ -417,14 +417,14 @@
           <label>Meddelande (valfritt)</label>
           <textarea placeholder="Berätta gärna lite om vad du önskar..."></textarea>
         </div>
-        <a href="#" class="btn-primary" style="display:block;text-align:center;">Skicka bokningsförfrågan</a>
+        <button type="submit" class="btn-primary" style="display:block;text-align:center;;width:100%;border:none;cursor:pointer;font:inherit">Skicka bokningsförfrågan</button>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p><strong>Salong Stella</strong> &nbsp;·&nbsp; Hornsgatan 42, Södermalm &nbsp;·&nbsp; <a href="tel:0812345678">08-123 45 67</a></p>
+    <p><strong>Salong Stella</strong> &nbsp;·&nbsp; Hornsgatan 42, Södermalm &nbsp;·&nbsp; <a href="tel:0812345678">08&#8209;123&nbsp;45&nbsp;67</a></p>
     <p style="margin-top:8px;">© 2026 Salong Stella &nbsp;·&nbsp; Hemsida skapad av <a href="https://sveadigital.se">Svea Digital</a></p>
   </footer>
 

@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
+
+# Tacksidan har inget eget värde i sökresultatet
 Disallow: /tack
+
+# Demosajterna under /showcase/ är exempelprojekt och bär redan noindex.
+# De hålls crawlbara så att noindex faktiskt kan läsas av sökmotorn.
 
 Sitemap: https://sveadigital.se/sitemap.xml

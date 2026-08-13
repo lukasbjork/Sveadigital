@@ -11,6 +11,15 @@
   <meta property="og:url" content="https://sveadigital.se/blogg/vad-ar-meta-description" />
   <meta property="og:locale" content="sv_SE" />
   <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Svea Digital" />
+  <meta property="og:image" content="https://sveadigital.se/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Svea Digital — professionella hemsidor för svenska småföretag" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vad är en meta description och varför spelar det roll?" />
+  <meta name="twitter:description" content="Meta description påverkar hur ditt företag visas på Google. Här förklarar vi vad det är och hur du skriver en som ger fler klick." />
+  <meta name="twitter:image" content="https://sveadigital.se/og-image.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,12 +32,12 @@
     "publisher": {"@type": "Organization", "name": "Svea Digital AB", "url": "https://sveadigital.se"}
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/style.css" />
   <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0f172a" />
   <link rel="manifest" href="/site.webmanifest">
   <style>
     .blog-hero {
@@ -43,7 +52,7 @@
       line-height: 1.2;
       margin-bottom: 16px;
     }
-    .blog-hero .meta { font-size: 0.9rem; color: rgba(255,255,255,0.5); }
+    .blog-hero .meta { font-size: 0.9rem; color: rgba(255,255,255,0.72); }
     .blog-body {
       max-width: 720px;
       margin: 0 auto;
@@ -86,32 +95,76 @@
       .blog-cta { padding: 36px 24px; }
     }
   </style>
+  <script>document.documentElement.classList.add('js');</script>
   <!-- Umami – cookiefri besöksstatistik -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+    <symbol id="i-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.4 8.4a2.1 2.1 0 0 1-3-3L12 9"/><path d="M17.6 6.4 22 10.8"/><path d="m14 5 3-3 5 5-3 3z"/><path d="M9.6 10.6 5.2 6.2"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h1a2 2 0 0 0 2-2V2"/><path d="M6 11v11"/><path d="M17 2v20"/><path d="M21 6c0 3-1.8 5-4 5"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 17.5 17.5"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 2.6 8.5 6.4 4.7 7.8l3.8 1.4 1.4 3.8 1.4-3.8 3.8-1.4-3.8-1.4z"/><path d="m18 10-.9 2.4-2.4.9 2.4.9.9 2.4.9-2.4 2.4-.9-2.4-.9z"/><path d="m6.5 15-.7 1.8-1.8.7 1.8.7.7 1.8.7-1.8 1.8-.7-1.8-.7z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2a10 10 0 0 0 0 20 2.5 2.5 0 0 0 2-4 2.5 2.5 0 0 1 2-4h2a4 4 0 0 0 4-4 10 10 0 0 0-10-8z"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5.5-2 5.5s4.2-.5 5.5-2c.7-.8.7-2.1 0-2.9a2.2 2.2 0 0 0-3.5-.6"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.6-6 11a22 22 0 0 1-4 2"/><path d="M9 12H4s.5-3.3 2-4c1.7-.7 5 0 5 0"/><path d="M12 15v5s3.3-.5 4-2c.7-1.7 0-5 0-5"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M16 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2z"/><path d="M3 14a9 9 0 0 1 18 0"/><path d="M21 19a3 3 0 0 1-3 3h-3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1 1 0 0 1 1.6 0C14.6 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h6"/><path d="m9 15 2 2 4-4"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 2.6a2 2 0 0 0-1.4-.6H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.2 8.2a2 2 0 0 0 2.8 0l7.2-7.2a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.9 5.8a2 2 0 0 1-2.2 0L2 7"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M2.4 21.5h5.2V9.3H2.4zm7.9 0h5.2v-6.6c0-3.5 4.4-3.8 4.4 0v6.6h5.2v-8.4c0-6.7-7-6.5-9.6-3.2V9.3h-5.2z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2"/><path d="M17.5 6.5h.01"/></symbol>
+  </svg>
+
   <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
-      <a href="/" class="logo"><img src="/svea-logo-navy.png" alt="Svea Digital" /></a>
-      <nav class="nav-links">
-        <a href="/#priser">Paket</a>
-        <a href="/#hur">Hur det fungerar</a>
+      <a href="/" class="logo" aria-label="Svea Digital — till startsidan">
+        <picture>
+          <source srcset="/svea-logo-navy.webp" type="image/webp" />
+          <img src="/svea-logo-navy.png" alt="Svea Digital" width="71" height="38" />
+        </picture>
+      </a>
+      <nav class="nav-links" aria-label="Huvudmeny">
+        <a href="/tjanster">Tjänster</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/kundcase">Kundcase</a>
+        <a href="/om-oss">Om oss</a>
         <a href="/blogg/">Blogg</a>
-        <a href="/gratis-analys.html">Gratis analys</a>
-        <a href="/#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka samtal</a>
+        <a href="/#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka gratis rådgivning</a>
       </nav>
-      <button class="hamburger" aria-label="Meny" onclick="toggleMenu()">&#9776;</button>
+      <button class="hamburger" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="/#priser" onclick="toggleMenu()">Paket</a>
-      <a href="/#hur" onclick="toggleMenu()">Hur det fungerar</a>
-      <a href="/blogg/" onclick="toggleMenu()">Blogg</a>
-      <a href="/gratis-analys.html" onclick="toggleMenu()">Gratis analys</a>
-      <a href="/#kontakt" class="btn" onclick="toggleMenu()" data-umami-event="boka-samtal-mobil">Boka samtal</a>
+      <a href="/tjanster">Tjänster</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/kundcase">Kundcase</a>
+      <a href="/om-oss">Om oss</a>
+      <a href="/blogg/">Blogg</a>
+      <a href="/gratis-analys">Gratis hemsideanalys</a>
+      <a href="/#kontakt" class="btn btn-primary" data-umami-event="boka-samtal-mobil">Boka gratis rådgivning</a>
     </div>
   </header>
+
+  <main id="main">
+
 
   <!-- HERO -->
   <section class="blog-hero">
@@ -185,52 +238,91 @@ Efter: "Elektriker i Stockholm med ROT-avdrag och snabb utryckning. Vi fixar all
 
 <h2>En liten detalj med stor effekt</h2>
 
-<p>Meta description är ett av de enklaste sätten att få ut mer av den trafik du redan har möjlighet att nå. Det kostar ingenting, tar några minuter per sida och kan ge mätbart fler besökare. Det är precis en sådan grundläggande sak som ofta saknas på hemsidor som annars ser bra ut — och en av punkterna i vår <a href="/blogg/checklista-hemsida.html">checklista över 10 saker din hemsida måste ha</a>.</p>
+<p>Meta description är ett av de enklaste sätten att få ut mer av den trafik du redan har möjlighet att nå. Det kostar ingenting, tar några minuter per sida och kan ge mätbart fler besökare. Det är precis en sådan grundläggande sak som ofta saknas på hemsidor som annars ser bra ut — och en av punkterna i vår <a href="/blogg/checklista-hemsida">checklista över 10 saker din hemsida måste ha</a>.</p>
 
-<p>Är du i färd med att skaffa eller göra om din hemsida är det här en av många detaljer som avgör om den faktiskt drar in kunder. Vi har samlat hela bilden — inklusive vad det brukar kosta — i guiden om <a href="/blogg/vad-kostar-en-hemsida-2026.html">vad en hemsida kostar 2026</a>.</p>
+<p>Är du i färd med att skaffa eller göra om din hemsida är det här en av många detaljer som avgör om den faktiskt drar in kunder. Vi har samlat hela bilden — inklusive vad det brukar kosta — i guiden om <a href="/blogg/vad-kostar-en-hemsida-2026">vad en hemsida kostar 2026</a>.</p>
 
 <div class="blog-cta">
   <h2>Vill du veta hur din hemsida syns på Google?</h2>
   <p>Vi gör en gratis analys av din digitala närvaro och berättar konkret vad som behöver åtgärdas — meta descriptions, sökord och allt annat som påverkar hur många kunder som hittar dig.</p>
-  <a href="/gratis-analys.html" class="btn btn-primary">Få din gratis analys</a>
+  <a href="/gratis-analys" class="btn btn-primary">Få din gratis analys</a>
 </div>
   </div>
+
+
+        <div class="related">
+          <h2>Relaterade guider</h2>
+          <ul class="related-list">
+            <li><a href="/blogg/checklista-hemsida">10 saker din hemsida måste ha (checklista 2026)</a></li>
+            <li><a href="/blogg/google-business-profile-hantverkare">Google Business Profile för hantverkare — komplett guide 2026</a></li>
+            <li><a href="/blogg/lokal-seo-restauranger-google-maps">Lokal SEO för restauranger — kom upp på Google Maps</a></li>
+            <li><a href="/portfolio">Se sex exempelprojekt i portfolion</a></li>
+          </ul>
+        </div>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="/" class="logo"><img src="/svea-logo.png" alt="Svea Digital" /></a>
-        <p>Professionella hemsidor för svenska småföretag.<br />Skräddarsydda lösningar. Hela Sverige.</p>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-heading">Navigering</h4>
-        <div class="footer-links">
-          <a href="/#priser">Paket</a>
-          <a href="/#hur">Hur det fungerar</a>
-          <a href="/blogg/">Blogg</a>
-          <a href="/gratis-analys.html">Gratis hemsideanalys</a>
-          <a href="/#kontakt">Kontakt</a>
+        <a href="/" class="logo" aria-label="Svea Digital — till startsidan">
+          <picture>
+            <source srcset="/svea-logo.webp" type="image/webp" />
+            <img src="/svea-logo.png" alt="Svea Digital" width="75" height="40" loading="lazy" />
+          </picture>
+        </a>
+        <p>Svea Digital bygger, driftar och optimerar hemsidor för svenska småföretag. Fast månadsavgift, ingen startavgift och support på svenska — så att du kan ägna dig åt din verksamhet istället för åt din webbplats.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Svea Digital på LinkedIn (länk saknas)"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Svea Digital på Facebook (länk saknas)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="Svea Digital på Instagram (länk saknas)"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
-        <h4 class="footer-heading">Kontakt</h4>
+        <h2 class="footer-heading">Innehåll</h2>
         <div class="footer-links">
-          <a href="mailto:kontakt@sveadigital.se">kontakt@sveadigital.se</a>
+          <a href="/tjanster">Tjänster</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/kundcase">Kundcase</a>
+          <a href="/om-oss">Om oss</a>
+          <a href="/blogg/">Blogg</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Kom igång</h2>
+        <div class="footer-links">
+          <a href="/#priser">Paket</a>
+          <a href="/#process">Så går det till</a>
+          <a href="/gratis-analys">Gratis hemsideanalys</a>
+          <a href="/#faq">Vanliga frågor</a>
+          <a href="/#kontakt">Boka rådgivning</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Kontakt</h2>
+        <div class="footer-links">
+          <a href="mailto:kontakt@sveadigital.se" data-umami-event="mejl-footer">kontakt@sveadigital.se</a>
+          <span>[TELEFONNUMMER]</span>
           <span>Hela Sverige, på distans</span>
           <span>Svar inom 24 timmar</span>
+          <span>Org.nr [ORG.NR]</span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Svea Digital AB</p>
+      <a href="/integritetspolicy">Integritetspolicy</a>
+      <a href="/integritetspolicy#cookies">Cookies</a>
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    }
-  </script>
+  <!-- STICKY MOBIL-CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="/gratis-analys" class="btn btn-outline" data-umami-event="sticky-analys">Gratis analys</a>
+    <a href="/#kontakt" class="btn btn-primary" data-umami-event="sticky-boka">Boka rådgivning</a>
+  </div>
+
+
+  <script src="/main.js" defer></script>
 </body>
 </html>
