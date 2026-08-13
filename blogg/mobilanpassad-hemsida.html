@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobilanpassad hemsida — därför tappar du kunder på mobilen — Svea Digital</title>
+  <meta name="description" content="En mobilanpassad hemsida är mer än en förminskad datorsida. Här är felen som kostar dig kunder i mobilen, vad Google ser — och testet du gör på fem minuter." />
+  <link rel="canonical" href="https://sveadigital.se/blogg/mobilanpassad-hemsida" />
+  <meta property="og:title" content="Mobilanpassad hemsida — därför tappar du kunder på mobilen" />
+  <meta property="og:description" content="En mobilanpassad hemsida är mer än en förminskad datorsida. Här är felen som kostar dig kunder i mobilen, vad Google ser — och testet du gör på fem minuter." />
+  <meta property="og:url" content="https://sveadigital.se/blogg/mobilanpassad-hemsida" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Svea Digital" />
+  <meta property="og:image" content="https://sveadigital.se/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Svea Digital — professionella hemsidor för svenska småföretag" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mobilanpassad hemsida — därför tappar du kunder på mobilen" />
+  <meta name="twitter:description" content="En mobilanpassad hemsida är mer än en förminskad datorsida. Här är felen som kostar dig kunder i mobilen, vad Google ser — och testet du gör på fem minuter." />
+  <meta name="twitter:image" content="https://sveadigital.se/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Mobilanpassad hemsida — därför tappar du kunder på mobilen",
+    "description": "En mobilanpassad hemsida är mer än en förminskad datorsida. Här är felen som kostar dig kunder i mobilen, vad Google ser — och testet du gör på fem minuter.",
+    "datePublished": "2026-07-13",
+    "dateModified": "2026-07-13",
+    "author": {"@type": "Organization", "name": "Svea Digital AB"},
+    "publisher": {"@type": "Organization", "name": "Svea Digital AB", "url": "https://sveadigital.se"}
+  }
+  </script>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/dm-serif-display-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    .blog-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      padding: 72px 0 56px;
+    }
+    .blog-hero .badge { margin-bottom: 20px; }
+    .blog-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .blog-hero .meta { font-size: 0.9rem; color: rgba(255,255,255,0.72); }
+    .blog-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+    .blog-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: #0f172a;
+      margin: 48px 0 16px;
+      line-height: 1.3;
+    }
+    .blog-body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 32px 0 12px;
+    }
+    .blog-body p { font-size: 1.05rem; line-height: 1.75; color: #334155; margin-bottom: 20px; }
+    .blog-body ul, .blog-body ol { margin: 0 0 20px 24px; }
+    .blog-body li { font-size: 1.05rem; line-height: 1.7; color: #334155; margin-bottom: 8px; }
+    .callout {
+      background: #f0fdf4;
+      border-left: 4px solid #0d9488;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .callout p { margin: 0; font-size: 1rem; color: #0f172a; }
+    .checklist-item {
+      display: flex;
+      gap: 16px;
+      padding: 24px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .checklist-item:last-child { border-bottom: none; }
+    .check-number {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+    .check-content h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+    .check-content p {
+      margin: 0;
+      font-size: 0.97rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+    .check-verdict {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 2px 10px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .verdict-must { background: #fee2e2; color: #b91c1c; }
+    .verdict-important { background: #fef9c3; color: #854d0e; }    .blog-cta {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      margin: 64px 0 0;
+    }
+    .blog-cta h2 { color: #fff; margin: 0 0 12px; font-size: 1.6rem; }
+    .blog-cta p { color: rgba(255,255,255,0.7); margin: 0 0 28px; }
+    @media (max-width: 600px) {
+      .blog-cta { padding: 36px 24px; }
+    }
+  </style>
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- Umami – cookiefri besöksstatistik -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+    <symbol id="i-hammer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.4 8.4a2.1 2.1 0 0 1-3-3L12 9"/><path d="M17.6 6.4 22 10.8"/><path d="m14 5 3-3 5 5-3 3z"/><path d="M9.6 10.6 5.2 6.2"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h1a2 2 0 0 0 2-2V2"/><path d="M6 11v11"/><path d="M17 2v20"/><path d="M21 6c0 3-1.8 5-4 5"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 17.5 17.5"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 2.6 8.5 6.4 4.7 7.8l3.8 1.4 1.4 3.8 1.4-3.8 3.8-1.4-3.8-1.4z"/><path d="m18 10-.9 2.4-2.4.9 2.4.9.9 2.4.9-2.4 2.4-.9-2.4-.9z"/><path d="m6.5 15-.7 1.8-1.8.7 1.8.7.7 1.8.7-1.8 1.8-.7-1.8-.7z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2a10 10 0 0 0 0 20 2.5 2.5 0 0 0 2-4 2.5 2.5 0 0 1 2-4h2a4 4 0 0 0 4-4 10 10 0 0 0-10-8z"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5.5-2 5.5s4.2-.5 5.5-2c.7-.8.7-2.1 0-2.9a2.2 2.2 0 0 0-3.5-.6"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.6-6 11a22 22 0 0 1-4 2"/><path d="M9 12H4s.5-3.3 2-4c1.7-.7 5 0 5 0"/><path d="M12 15v5s3.3-.5 4-2c.7-1.7 0-5 0-5"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M16 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2z"/><path d="M3 14a9 9 0 0 1 18 0"/><path d="M21 19a3 3 0 0 1-3 3h-3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1 1 0 0 1 1.6 0C14.6 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h6"/><path d="m9 15 2 2 4-4"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 2.6a2 2 0 0 0-1.4-.6H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.2 8.2a2 2 0 0 0 2.8 0l7.2-7.2a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.9 5.8a2 2 0 0 1-2.2 0L2 7"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M2.4 21.5h5.2V9.3H2.4zm7.9 0h5.2v-6.6c0-3.5 4.4-3.8 4.4 0v6.6h5.2v-8.4c0-6.7-7-6.5-9.6-3.2V9.3h-5.2z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2"/><path d="M17.5 6.5h.01"/></symbol>
+  </svg>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo" aria-label="Svea Digital — till startsidan">
+        <picture>
+          <source srcset="/svea-logo-navy.webp" type="image/webp" />
+          <img src="/svea-logo-navy.png" alt="Svea Digital" width="71" height="38" />
+        </picture>
+      </a>
+      <nav class="nav-links" aria-label="Huvudmeny">
+        <a href="/tjanster">Tjänster</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/kundcase">Kundcase</a>
+        <a href="/om-oss">Om oss</a>
+        <a href="/blogg/">Blogg</a>
+        <a href="/#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka gratis rådgivning</a>
+      </nav>
+      <button class="hamburger" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger-box" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/tjanster">Tjänster</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/kundcase">Kundcase</a>
+      <a href="/om-oss">Om oss</a>
+      <a href="/blogg/">Blogg</a>
+      <a href="/gratis-analys">Gratis hemsideanalys</a>
+      <a href="/#kontakt" class="btn btn-primary" data-umami-event="boka-samtal-mobil">Boka gratis rådgivning</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="badge">Teknik</div>
+      <h1>Mobilanpassad hemsida — därför tappar du kunder på mobilen</h1>
+      <p class="meta">Svea Digital · 13 juli 2026 · 8 min läsning</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="blog-body">
+<p>Din hemsida ser bra ut. Det vet du, för du tittar på den i datorn — stor skärm, mus och gott om plats. Men de flesta av dina besökare ser något helt annat: en hopträngd version i en telefon som hålls i ena handen, ofta i rörelse och nästan alltid med ont om tid. Är sidan inte byggd för det får du aldrig veta vad du missade, för den som ger upp på en mobilsida hör aldrig av sig för att berätta varför.</p>
+
+<p>Här går vi igenom vad mobilanpassad faktiskt betyder, vilka fel som får besökare att lämna, vad det innebär att Google indexerar mobilversionen av din sida — och ett mobiltest du gör på fem minuter med din egen telefon.</p>
+
+<h2>Mobilanpassad betyder inte "sidan syns i mobilen"</h2>
+
+<p>Nästan alla hemsidor syns i mobilen. Frågan är hur. Den vanliga lösningen är att datorsidan krymps ihop tills den får plats på skärmen — samma tre kolumner, samma meny, samma bildspel, fast i miniatyr. Tekniskt fungerar det. I praktiken sitter besökaren och zoomar.</p>
+
+<p>En mobilanpassad sida är något annat. Innehållet bryts om till en enda kolumn, texten sätts i en storlek som går att läsa direkt, och allt man ska trycka på är gjort för en tumme. En muspekare träffar på pixeln. En tumme täcker ett helt fält, och den som håller telefonen gör det ofta med en hand, stående, i dåligt ljus.</p>
+
+<p>Grunden är en rad kod i sidans huvud som säger åt telefonen att layouten ska följa skärmens bredd. Saknas den ritas sidan upp som om den vore en datorskärm och zoomas ut. Googles guide om <a href="https://web.dev/articles/responsive-web-design-basics">responsiv design på web.dev</a> beskriver den inställningen som förutsättningen för att sidan ska gå att läsa utan att zooma in.</p>
+
+<h2>De sju felen som kostar dig kunder</h2>
+
+<h3>1. Texten måste zoomas</h3>
+
+<p>Behöver besökaren nypa isär skärmen för att läsa dina öppettider har du tappat en del av dem redan där. Vanligaste orsaken är att sidan sätter en fast textstorlek som ser rimlig ut på en 27-tumsskärm och blir myrspår i handen.</p>
+
+<h3>2. Knappar och länkar ligger för tätt</h3>
+
+<p>Tre länkar under varandra med några pixlars mellanrum fungerar med muspekare. Med tumme blir det ett lotteri, och den som trycker fel en gång för mycket lämnar sidan. Tillgänglighetsstandarden WCAG 2.2 sätter en konkret miniminivå: en klickyta ska vara <a href="https://www.w3.org/TR/WCAG22/#target-size-minimum">minst 24 gånger 24 CSS-pixlar</a> på nivå AA, med undantag bland annat för länkar inuti löpande text. Det är ett golv, inte ett mål — knappar som ska tryckas ofta mår bra av att vara större.</p>
+
+<h3>3. Telefonnumret går inte att trycka på</h3>
+
+<p>Det här är det billigaste felet att åtgärda och ett av de dyraste att låta vara. Ett nummer som bara står som text tvingar kunden att markera siffrorna, kopiera dem och klistra in dem i telefonappen. Halvvägs dit har hon tröttnat. Numret ska starta samtalet med ett tryck, adressen ska öppna kartan.</p>
+
+<h3>4. Innehållet ligger i en PDF</h3>
+
+<p>Menyer, prislistor och kursscheman hamnar ofta i en PDF, för det var filen som redan fanns. På mobilen laddar besökaren då ner ett dokument som öppnas i en separat läsare, i A4-format, och måste zoomas och dras i sidled. Vi har gått igenom resonemanget i guiden om <a href="/blogg/meny-pa-hemsidan-restaurang">hur du gör menyn på hemsidan sökbar och säljande</a>, men det gäller alla branscher: det kunden ska läsa hör hemma på sidan, inte i en bilaga.</p>
+
+<h3>5. Sidan går att dra i sidled</h3>
+
+<p>Kan du svepa sidan åt vänster och se en tom remsa vid kanten är något bredare än skärmen — oftast en bild, en tabell eller ett kartfönster med fast bredd. Följden är att texten hoppar i sidled när man scrollar och att knappar hamnar utanför synfältet. Vi är vana vid att scrolla uppåt och nedåt, och sidled irriterar direkt.</p>
+
+<h3>6. Popupen täcker hela skärmen</h3>
+
+<p>En ruta om nyhetsbrev, rabattkod eller cookies är på en datorskärm en tredjedel av ytan och lätt att stänga. På mobilen är samma ruta hela upplevelsen, och krysset ofta stort som ett knappnålshuvud. Är det första besökaren möter något hon måste sikta för att bli av med, har du lagt ett hinder framför din egen entré.</p>
+
+<h3>7. Menyn kräver precision</h3>
+
+<p>Hamburgermenyn — de tre strecken uppe i hörnet — är standard och helt okej. Problemet uppstår när den fälls ut till fjorton punkter i liten stil, med undermenyer som öppnas när muspekaren vilar över dem, något som inte finns på en pekskärm. Menyn ska ha få punkter, stora träffytor och det viktigaste först: kontakt, öppettider, boka.</p>
+
+<div class="callout"><p><strong>Tumregel:</strong> Om du behöver zooma, sikta eller dra i sidled för att göra det du kom för att göra, är sidan inte mobilanpassad — hur bra den än ser ut på datorn.</p></div>
+
+<h2>Vad mobilanpassning inte kräver</h2>
+
+<p>Lika viktigt är vad du kan låta bli. Du behöver ingen app — för ett litet företag är det nästan alltid fel investering, eftersom kunden måste installera den innan hon kan använda dig. Du behöver ingen separat mobilsida på egen adress heller; det betyder bara två versioner av samma innehåll, varav den ena glöms bort. Och banta inte innehållet för mobilen: en kund som läser i telefonen har lika många frågor som en vid datorn.</p>
+
+<h2>Google indexerar mobilversionen av din sida</h2>
+
+<p>Det här är delen som brukar överraska. Google läser inte din datorsida och visar den sedan i mobilen — det är tvärtom. I dokumentationen står det att <a href="https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing">mobilversionen av innehållet, hämtad med smartphone-agenten, används för indexering och rankning</a>. Google rekommenderar också att mobilsidan innehåller samma innehåll som datorsidan.</p>
+
+<p>I praktiken betyder det tre saker. Text som saknas i mobilen finns inte för Google heller — har någon förenklat mobilversionen genom att plocka bort tjänstebeskrivningar, är det den bantade versionen som bedöms. Rubriker, bilder och bildbeskrivningar behöver finnas i mobilen, inte bara på datorsidan. Och eftersom det är mobilversionen som indexeras är det där titeln och <a href="/blogg/vad-ar-meta-description">sidans meta description</a> måste sitta rätt.</p>
+
+<div class="callout"><p><strong>Bra att veta:</strong> En och samma sida som anpassar sig efter skärmen är enklare att sköta än två parallella versioner — och gör det omöjligt att av misstag ha olika innehåll för mobil och dator.</p></div>
+
+<p>Hastighet hör till samma helhet men är en egen fråga — här handlar det om hur sidan fungerar när den väl visas. En sak går ändå inte att skilja åt: en bild gjord för en datorskärm laddas ner i full storlek även på telefonen, om sidan bara skalar ner den visuellt.</p>
+
+<h2>Femminuterstestet på din egen telefon</h2>
+
+<p>Du behöver inga verktyg och ingen teknisk bakgrund. Ta upp telefonen, öppna din hemsida och gå igenom punkterna i tur och ordning — med en hand, precis som en kund skulle göra.</p>
+
+<div class="checklist-item">
+      <div class="check-number">1</div>
+      <div class="check-content">
+        <h3>Läs startsidan utan att zooma</h3>
+        <p>Läs rubriken och första stycket rakt av, med telefonen på normalt läsavstånd. Behöver du nypa isär skärmen en enda gång är texten för liten. Testa sedan en undersida — startsidan är ofta omsorgsfullt gjord medan tjänstesidorna är eftersatta.</p>
+        <span class="check-verdict verdict-must">Fixa först</span>
+      </div>
+    </div>
+
+<div class="checklist-item">
+      <div class="check-number">2</div>
+      <div class="check-content">
+        <h3>Tryck på telefonnumret</h3>
+        <p>Leta rätt på ditt telefonnummer och tryck på det. Startar telefonen ett samtal är det rätt gjort. Händer ingenting är numret bara text, och varje kund som vill ringa får kopiera siffrorna för hand. Gör samma sak med adressen — den ska öppna kartan.</p>
+        <span class="check-verdict verdict-must">Fixa först</span>
+      </div>
+    </div>
+
+<div class="checklist-item">
+      <div class="check-number">3</div>
+      <div class="check-content">
+        <h3>Dra sidan i sidled</h3>
+        <p>Sätt tummen mitt på sidan och dra åt vänster. Rör sig innehållet, eller dyker en tom remsa upp vid kanten, är något bredare än skärmen. Gör om testet på ett par ställen längre ner — det är ofta en enskild bild eller tabell som spräcker layouten.</p>
+        <span class="check-verdict verdict-must">Fixa först</span>
+      </div>
+    </div>
+
+<div class="checklist-item">
+      <div class="check-number">4</div>
+      <div class="check-content">
+        <h3>Ta dig till kontaktsidan med en hand</h3>
+        <p>Navigera från startsidan till kontaktsidan utan att byta grepp. Träffar du fel länk på vägen ligger klickytorna för tätt. Titta samtidigt på menyn: behöver du scrolla inuti den för att se alla punkter är den för lång.</p>
+        <span class="check-verdict verdict-important">Viktigt</span>
+      </div>
+    </div>
+
+<div class="checklist-item">
+      <div class="check-number">5</div>
+      <div class="check-content">
+        <h3>Hitta öppettider och adress på tio sekunder</h3>
+        <p>Ta tid på dig själv. Öppettider, adress och en prisindikation ska gå att hitta inom tio sekunder. Ligger de längst ner på en lång startsida eller bakom två menyklick är de för långt bort för någon som står upp.</p>
+        <span class="check-verdict verdict-important">Viktigt</span>
+      </div>
+    </div>
+
+<div class="checklist-item">
+      <div class="check-number">6</div>
+      <div class="check-content">
+        <h3>Kontrollera att inget viktigt bara finns i en PDF</h3>
+        <p>Gå igenom meny, prislista, scheman och villkor. Öppnas något som en nedladdad fil ska samma innehåll finnas som vanlig text på en sida. Kolla också vad som möter dig när sidan laddas — täcker en popup skärmen ska den gå att stänga med ett tryck, utan att du behöver sikta.</p>
+        <span class="check-verdict verdict-important">Viktigt</span>
+      </div>
+    </div>
+
+<p>Klarade sidan alla sex är grunden på plats, och då är det värt att gå vidare med vår <a href="/blogg/checklista-hemsida">checklista över tio saker din hemsida måste ha</a>. Föll den på tre eller fler har du hittat orsaken till att besökarna inte hör av sig.</p>
+
+<div class="callout"><p><strong>Tips:</strong> Be någon annan göra testet, helst någon som aldrig sett din sida. Du vet var allt ligger och hittar rätt av ren vana. En utomstående hittar felen på trettio sekunder.</p></div>
+
+<h2>De flesta mobilfel är småfix, inte en ombyggnad</h2>
+
+<p>Här är den ärliga versionen: de flesta hemsidor behöver inte byggas om för att fungera i mobilen. Klickbart telefonnummer, större text, luft mellan länkarna, kortare meny och en PDF som blir vanlig text — fem ändringar som ofta ryms på en förmiddag och tar hand om merparten av problemen.</p>
+
+<p>Ombyggnad behövs först när grunden saknas: när sidan är ritad i fast bredd och bara krymps ihop, när layouten inte går att bryta om till en kolumn. Då blir lappandet dyrare än att göra om. Gör testet innan du bestämmer dig — det avgör vilken situation du befinner dig i.</p>
+
+<div class="blog-cta">
+  <h2>Vill du veta hur din sida beter sig i mobilen?</h2>
+  <p>Vi går igenom din hemsida i mobilen och berättar konkret vad som skaver och vad som är värt att fixa först. Det är gratis och helt utan säljsnack.</p>
+  <a href="/gratis-analys" class="btn btn-primary">Få din gratis analys</a>
+</div>
+  </div>
+
+
+        <div class="related">
+          <h2>Relaterade guider</h2>
+          <ul class="related-list">
+            <li><a href="/blogg/checklista-hemsida">10 saker din hemsida måste ha (checklista 2026)</a></li>
+            <li><a href="/blogg/meny-pa-hemsidan-restaurang">Menyn på hemsidan — så gör du den sökbar och säljande</a></li>
+            <li><a href="/blogg/vad-ar-meta-description">Vad är en meta description och varför spelar det roll?</a></li>
+            <li><a href="/portfolio">Se sex exempelprojekt i portfolion</a></li>
+          </ul>
+        </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo" aria-label="Svea Digital — till startsidan">
+          <picture>
+            <source srcset="/svea-logo.webp" type="image/webp" />
+            <img src="/svea-logo.png" alt="Svea Digital" width="75" height="40" loading="lazy" />
+          </picture>
+        </a>
+        <p>Svea Digital bygger, driftar och optimerar hemsidor för svenska småföretag. Fast månadsavgift, ingen startavgift och support på svenska — så att du kan ägna dig åt din verksamhet istället för åt din webbplats.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Svea Digital på LinkedIn (länk saknas)"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+          <a href="#" aria-label="Svea Digital på Facebook (länk saknas)"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+          <a href="#" aria-label="Svea Digital på Instagram (länk saknas)"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Innehåll</h2>
+        <div class="footer-links">
+          <a href="/tjanster">Tjänster</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/kundcase">Kundcase</a>
+          <a href="/om-oss">Om oss</a>
+          <a href="/blogg/">Blogg</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Kom igång</h2>
+        <div class="footer-links">
+          <a href="/#priser">Paket</a>
+          <a href="/#process">Så går det till</a>
+          <a href="/gratis-analys">Gratis hemsideanalys</a>
+          <a href="/#faq">Vanliga frågor</a>
+          <a href="/#kontakt">Boka rådgivning</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Kontakt</h2>
+        <div class="footer-links">
+          <a href="mailto:kontakt@sveadigital.se" data-umami-event="mejl-footer">kontakt@sveadigital.se</a>
+          <span>[TELEFONNUMMER]</span>
+          <span>Hela Sverige, på distans</span>
+          <span>Svar inom 24 timmar</span>
+          <span>Org.nr [ORG.NR]</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Svea Digital AB</p>
+      <a href="/integritetspolicy">Integritetspolicy</a>
+      <a href="/integritetspolicy#cookies">Cookies</a>
+    </div>
+  </footer>
+
+  <!-- STICKY MOBIL-CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="/gratis-analys" class="btn btn-outline" data-umami-event="sticky-analys">Gratis analys</a>
+    <a href="/#kontakt" class="btn btn-primary" data-umami-event="sticky-boka">Boka rådgivning</a>
+  </div>
+
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
