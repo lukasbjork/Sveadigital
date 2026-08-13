@@ -80,9 +80,15 @@
   <!-- Blogg -->
   <url>
     <loc>https://sveadigital.se/blogg/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sveadigital.se/blogg/fler-google-recensioner</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sveadigital.se/blogg/meny-pa-hemsidan-restaurang</loc>
