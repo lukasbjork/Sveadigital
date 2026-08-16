@@ -40,7 +40,7 @@
       {
         "@type": "Organization",
         "@id": "https://sveadigital.se/#organization",
-        "name": "Svea Digital AB",
+        "name": "Svea Digital",
         "url": "https://sveadigital.se/",
         "logo": {
           "@type": "ImageObject",
@@ -49,6 +49,7 @@
           "height": 512
         },
         "email": "kontakt@sveadigital.se",
+        "telephone": "+46736491852",
         "description": "Svea Digital bygger, driftar och optimerar hemsidor för svenska småföretag.",
         "areaServed": {"@type": "Country", "name": "Sverige"},
         "knowsLanguage": "sv"
@@ -56,10 +57,11 @@
       {
         "@type": "ProfessionalService",
         "@id": "https://sveadigital.se/#service",
-        "name": "Svea Digital AB",
+        "name": "Svea Digital",
         "url": "https://sveadigital.se/",
         "parentOrganization": {"@id": "https://sveadigital.se/#organization"},
         "email": "kontakt@sveadigital.se",
+        "telephone": "+46736491852",
         "image": "https://sveadigital.se/og-image.png",
         "priceRange": "$$",
         "areaServed": {"@type": "Country", "name": "Sverige"},
@@ -154,8 +156,6 @@
       </a>
       <nav class="nav-links" aria-label="Huvudmeny">
         <a href="/tjanster">Tjänster</a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/kundcase">Kundcase</a>
         <a href="/om-oss">Om oss</a>
         <a href="/blogg/">Blogg</a>
         <a href="#kontakt" class="btn btn-sm" data-umami-event="boka-samtal-nav">Boka gratis rådgivning</a>
@@ -166,8 +166,6 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="/tjanster">Tjänster</a>
-      <a href="/portfolio">Portfolio</a>
-      <a href="/kundcase">Kundcase</a>
       <a href="/om-oss">Om oss</a>
       <a href="/blogg/">Blogg</a>
       <a href="/gratis-analys">Gratis hemsideanalys</a>
@@ -185,7 +183,6 @@
         <p class="hero-sub">Fler av dem som söker efter din tjänst i din stad hör av sig till dig — inte till konkurrenten. Vi bygger, driftar och optimerar allt. Du gör ditt jobb.</p>
         <div class="hero-cta">
           <a href="#kontakt" class="btn btn-primary btn-lg" data-umami-event="boka-samtal-hero">Boka gratis rådgivning</a>
-          <a href="/portfolio" class="btn btn-ghost btn-lg" data-umami-event="se-projekt-hero">Se våra projekt</a>
         </div>
         <ul class="hero-trust">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Kostnadsfri första rådgivning</li>
@@ -268,146 +265,11 @@
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section class="section section--alt" id="portfolio">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <p class="eyebrow">Utvalda projekt</p>
-          <h2>Så här kan din sida se ut</h2>
-          <p class="section-sub">Sex exempelprojekt som visar hur vi bygger för olika branscher. Klicka in på vilken som helst — de är riktiga, fungerande sidor du kan klicka runt i.</p>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-card reveal">
-            <div class="work-shot">
-              <span class="work-tag">Frisörsalong</span>
-              <img class="work-shot__desktop" src="/assets/portfolio/salong-stella-desktop.webp" alt="Salong Stellas startsida visad i en dator: rubrik, bokningsknapp och prislista." width="900" height="563" loading="lazy" decoding="async" />
-              <img class="work-shot__mobile" src="/assets/portfolio/salong-stella-mobil.webp" alt="Samma sida visad i en mobil." width="240" height="519" loading="lazy" decoding="async" />
-            </div>
-            <div class="work-body">
-              <h3>Salong Stella</h3>
-              <p>Salong på Södermalm som ville sluta ta bokningar via DM och få kunden att boka själv.</p>
-              <ul class="work-meta">
-                <li><strong>Vi gjorde</strong><span>Tjänster med priser och tidsåtgång, bokningsflöde och Google-optimering för "frisör Södermalm".</span></li>
-                <li><strong>Resultat</strong><span>Kunden ser pris och tid innan hon hör av sig — färre frågor, fler bokade tider.</span></li>
-              </ul>
-            </div>
-            <div class="work-actions">
-              <a class="btn btn-outline btn-sm" href="/showcase/salong-stella.html" target="_blank" rel="noopener" data-umami-event="demo-salong-stella">Öppna sidan</a>
-              <a class="btn btn-dark btn-sm" href="/kundcase/salong-stella">Läs caset</a>
-            </div>
-          </article>
-
-          <article class="work-card reveal reveal-delay-1">
-            <div class="work-shot">
-              <span class="work-tag">Elektriker</span>
-              <img class="work-shot__desktop" src="/assets/portfolio/bjorklunds-el-desktop.webp" alt="Björklunds Els startsida i en dator: rubrik om elarbeten, offertknapp och referensprojekt." width="900" height="563" loading="lazy" decoding="async" />
-              <img class="work-shot__mobile" src="/assets/portfolio/bjorklunds-el-mobil.webp" alt="Samma sida visad i en mobil." width="240" height="519" loading="lazy" decoding="async" />
-            </div>
-            <div class="work-body">
-              <h3>Björklunds El</h3>
-              <p>Elfirma som fick jobb via rykte men inte syntes alls när någon sökte på Google.</p>
-              <ul class="work-meta">
-                <li><strong>Vi gjorde</strong><span>Tjänstesidor per elarbete, ROT-information och ett offertformulär som frågar rätt saker direkt.</span></li>
-                <li><strong>Resultat</strong><span>Förfrågningarna kommer in med tillräcklig information för att kunna prissättas på en gång.</span></li>
-              </ul>
-            </div>
-            <div class="work-actions">
-              <a class="btn btn-outline btn-sm" href="/showcase/bjorklunds-el.html" target="_blank" rel="noopener" data-umami-event="demo-bjorklunds-el">Öppna sidan</a>
-              <a class="btn btn-dark btn-sm" href="/kundcase/bjorklunds-el">Läs caset</a>
-            </div>
-          </article>
-
-          <article class="work-card reveal">
-            <div class="work-shot">
-              <span class="work-tag">Restaurang</span>
-              <img class="work-shot__desktop" src="/assets/portfolio/restaurang-hamnen-desktop.webp" alt="Restaurang Hamnens startsida i en dator: bild på maten, meny och bordsbokning." width="900" height="563" loading="lazy" decoding="async" />
-              <img class="work-shot__mobile" src="/assets/portfolio/restaurang-hamnen-mobil.webp" alt="Samma sida visad i en mobil." width="240" height="519" loading="lazy" decoding="async" />
-            </div>
-            <div class="work-body">
-              <h3>Restaurang Hamnen</h3>
-              <p>Restaurang vars meny bara fanns som PDF — omöjlig att läsa i mobilen, osynlig för Google.</p>
-              <ul class="work-meta">
-                <li><strong>Vi gjorde</strong><span>Meny som text, öppettider, bordsbokning och kartlänk högst upp i mobilvyn.</span></li>
-                <li><strong>Resultat</strong><span>Gästen ser vad som serveras och hittar dit utan att behöva zooma i en PDF.</span></li>
-              </ul>
-            </div>
-            <div class="work-actions">
-              <a class="btn btn-outline btn-sm" href="/showcase/restaurang-hamnen.html" target="_blank" rel="noopener" data-umami-event="demo-restaurang-hamnen">Öppna sidan</a>
-              <a class="btn btn-dark btn-sm" href="/kundcase/restaurang-hamnen">Läs caset</a>
-            </div>
-          </article>
-
-          <article class="work-card reveal reveal-delay-1">
-            <div class="work-shot">
-              <span class="work-tag">Städföretag</span>
-              <img class="work-shot__desktop" src="/assets/portfolio/nordstad-desktop.webp" alt="Nordstäds startsida i en dator: rubrik om hemstädning, priser och offertformulär." width="900" height="563" loading="lazy" decoding="async" />
-              <img class="work-shot__mobile" src="/assets/portfolio/nordstad-mobil.webp" alt="Samma sida visad i en mobil." width="240" height="519" loading="lazy" decoding="async" />
-            </div>
-            <div class="work-body">
-              <h3>Nordstäd</h3>
-              <p>Städföretag som la timmar varje vecka på att svara på samma frågor om pris och RUT-avdrag.</p>
-              <ul class="work-meta">
-                <li><strong>Vi gjorde</strong><span>Prisexempel per bostadsstorlek, RUT-uträkning direkt på sidan och ett formulär som fångar rätt uppgifter.</span></li>
-                <li><strong>Resultat</strong><span>Kunden räknar ut sitt pris själv och hör av sig först när hon redan bestämt sig.</span></li>
-              </ul>
-            </div>
-            <div class="work-actions">
-              <a class="btn btn-outline btn-sm" href="/showcase/stadfirma-nordstad.html" target="_blank" rel="noopener" data-umami-event="demo-nordstad">Öppna sidan</a>
-              <a class="btn btn-dark btn-sm" href="/kundcase/nordstad">Läs caset</a>
-            </div>
-          </article>
-
-          <article class="work-card reveal">
-            <div class="work-shot">
-              <span class="work-tag">Träningsstudio</span>
-              <img class="work-shot__desktop" src="/assets/portfolio/studio-puls-desktop.webp" alt="Studio Puls startsida i en dator: rubrik om personlig träning, upplägg och provpass." width="900" height="563" loading="lazy" decoding="async" />
-              <img class="work-shot__mobile" src="/assets/portfolio/studio-puls-mobil.webp" alt="Samma sida visad i en mobil." width="240" height="519" loading="lazy" decoding="async" />
-            </div>
-            <div class="work-body">
-              <h3>Studio Puls</h3>
-              <p>PT-studio där intresserade hörde av sig, fick ett långt svarsmejl — och sedan försvann.</p>
-              <ul class="work-meta">
-                <li><strong>Vi gjorde</strong><span>Tydliga upplägg med pris, schema för gruppass och ett kort formulär för att boka provpass.</span></li>
-                <li><strong>Resultat</strong><span>Steget från nyfiken till bokat provpass tar mindre än en minut.</span></li>
-              </ul>
-            </div>
-            <div class="work-actions">
-              <a class="btn btn-outline btn-sm" href="/showcase/pt-studio-puls.html" target="_blank" rel="noopener" data-umami-event="demo-studio-puls">Öppna sidan</a>
-              <a class="btn btn-dark btn-sm" href="/kundcase/studio-puls">Läs caset</a>
-            </div>
-          </article>
-
-          <article class="work-card reveal reveal-delay-1">
-            <div class="work-shot">
-              <span class="work-tag">Måleri</span>
-              <img class="work-shot__desktop" src="/assets/portfolio/lindqvist-maleri-desktop.webp" alt="Lindqvist Måleris startsida i en dator: före- och efterbilder, tjänster och offertknapp." width="900" height="563" loading="lazy" decoding="async" />
-              <img class="work-shot__mobile" src="/assets/portfolio/lindqvist-maleri-mobil.webp" alt="Samma sida visad i en mobil." width="240" height="519" loading="lazy" decoding="async" />
-            </div>
-            <div class="work-body">
-              <h3>Lindqvist Måleri</h3>
-              <p>Måleri vars bästa säljargument — före- och efterbilderna — låg begravda på Facebook.</p>
-              <ul class="work-meta">
-                <li><strong>Vi gjorde</strong><span>Projektgalleri med före och efter, ROT-räknare och tydliga tjänstesidor för måleri inomhus och utomhus.</span></li>
-                <li><strong>Resultat</strong><span>Arbetet syns innan första samtalet, vilket gör prisdiskussionen enklare.</span></li>
-              </ul>
-            </div>
-            <div class="work-actions">
-              <a class="btn btn-outline btn-sm" href="/showcase/maleri-lindqvist.html" target="_blank" rel="noopener" data-umami-event="demo-lindqvist-maleri">Öppna sidan</a>
-              <a class="btn btn-dark btn-sm" href="/kundcase/lindqvist-maleri">Läs caset</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="cta-strip reveal">
-          <p>Vill du se hur det skulle se ut för ditt företag?<span>Vi visar ett konkret förslag på 20 minuter — utan att du binder dig till något.</span></p>
-          <a href="#kontakt" class="btn btn-primary" data-umami-event="cta-efter-portfolio">Boka gratis rådgivning</a>
-        </div>
-      </div>
-    </section>
-
     <!-- PROCESS -->
-    <section class="section" id="process">
+    <!-- OBS: section--alt här håller bakgrundsrytmen ljus/mörk växelvis nu när
+         de arkiverade sektionerna PORTFOLIO och OMDÖMEN är borttagna. Om de
+         tas tillbaka (se _archive/README.md) ska klassen bli enbart "section". -->
+    <section class="section section--alt" id="process">
       <div class="container">
         <div class="section-head section-head--center reveal">
           <p class="eyebrow">Så går det till</p>
@@ -464,82 +326,6 @@
           <p>Steg ett tar 20 minuter.<span>Kostnadsfritt, och du bestämmer själv om du vill gå vidare efteråt.</span></p>
           <a href="#kontakt" class="btn btn-primary" data-umami-event="cta-efter-process">Boka gratis rådgivning</a>
         </div>
-      </div>
-    </section>
-
-    <!-- RESULTAT & OMDÖMEN -->
-    <section class="section section--alt" id="omdomen">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <p class="eyebrow">Resultat &amp; omdömen</p>
-          <h2>Siffrorna bakom arbetet</h2>
-          <p class="section-sub">Vi redovisar bara det vi kan stå för. Fälten nedan som saknar siffror fylls i när underlaget finns.</p>
-        </div>
-
-        <div class="stat-grid">
-          <div class="stat-item reveal">
-            <p class="stat-value">14</p>
-            <p class="stat-label">Dagar från start till publicerad sida</p>
-          </div>
-          <div class="stat-item reveal reveal-delay-1">
-            <p class="stat-value">24 h</p>
-            <p class="stat-label">Genomsnittlig svarstid på vardagar</p>
-          </div>
-          <div class="stat-item is-placeholder reveal reveal-delay-2">
-            <span class="placeholder-tag">Platshållare</span>
-            <p class="stat-value">[XX]+</p>
-            <p class="stat-label">Hemsidor byggda</p>
-          </div>
-          <div class="stat-item is-placeholder reveal reveal-delay-3">
-            <span class="placeholder-tag">Platshållare</span>
-            <p class="stat-value">[X,X]/5</p>
-            <p class="stat-label">Genomsnittligt kundbetyg</p>
-          </div>
-        </div>
-
-        <div class="rating-slot is-placeholder reveal" style="margin-top:var(--space-12)">
-          <div>
-            <span class="placeholder-tag">Platshållare</span>
-            <strong>[Google-betyg]</strong>
-            <span>Plats för Google-recensioner</span>
-          </div>
-          <div>
-            <span class="placeholder-tag">Platshållare</span>
-            <strong>[Trustpilot-betyg]</strong>
-            <span>Plats för Trustpilot-widget</span>
-          </div>
-        </div>
-
-        <div class="review-grid">
-          <figure class="review-card is-placeholder reveal">
-            <span class="placeholder-tag">Kundcitat saknas</span>
-            <div class="review-stars" aria-hidden="true">★★★★★</div>
-            <blockquote>”[Här står omdömet från en riktig kund. Ersätt hela den här texten med kundens egna ord — hittepå-citat publiceras inte.]”</blockquote>
-            <figcaption class="review-author"><strong>[Kundens namn]</strong>[Företag, ort]</figcaption>
-          </figure>
-          <figure class="review-card is-placeholder reveal reveal-delay-1">
-            <span class="placeholder-tag">Kundcitat saknas</span>
-            <div class="review-stars" aria-hidden="true">★★★★★</div>
-            <blockquote>”[Här står omdömet från en riktig kund. Ersätt hela den här texten med kundens egna ord — hittepå-citat publiceras inte.]”</blockquote>
-            <figcaption class="review-author"><strong>[Kundens namn]</strong>[Företag, ort]</figcaption>
-          </figure>
-          <figure class="review-card is-placeholder reveal reveal-delay-2">
-            <span class="placeholder-tag">Kundcitat saknas</span>
-            <div class="review-stars" aria-hidden="true">★★★★★</div>
-            <blockquote>”[Här står omdömet från en riktig kund. Ersätt hela den här texten med kundens egna ord — hittepå-citat publiceras inte.]”</blockquote>
-            <figcaption class="review-author"><strong>[Kundens namn]</strong>[Företag, ort]</figcaption>
-          </figure>
-        </div>
-
-        <div class="logo-row reveal">
-          <span class="logo-slot is-placeholder">Kundlogotyp</span>
-          <span class="logo-slot is-placeholder">Kundlogotyp</span>
-          <span class="logo-slot is-placeholder">Kundlogotyp</span>
-          <span class="logo-slot is-placeholder">Kundlogotyp</span>
-          <span class="logo-slot is-placeholder">Kundlogotyp</span>
-        </div>
-
-        <p class="placeholder-note">De streckade rutorna är medvetet tomma. Vi publicerar inga betyg, omdömen eller kundsiffror förrän det finns riktiga uppgifter att visa.</p>
       </div>
     </section>
 
@@ -793,7 +579,7 @@
               <svg aria-hidden="true"><use href="#i-phone"/></svg>
               <div>
                 <p class="ch-label">Telefon</p>
-                <p>[TELEFONNUMMER — fyll i eller ta bort raden]</p>
+                <a href="tel:+46736491852" class="contact-link" data-umami-event="telefon">073 649 18 52</a>
               </div>
             </div>
             <div class="contact-channel">
@@ -865,8 +651,6 @@
         <h2 class="footer-heading">Innehåll</h2>
         <div class="footer-links">
           <a href="/tjanster">Tjänster</a>
-          <a href="/portfolio">Portfolio</a>
-          <a href="/kundcase">Kundcase</a>
           <a href="/om-oss">Om oss</a>
           <a href="/blogg/">Blogg</a>
         </div>
@@ -885,15 +669,14 @@
         <h2 class="footer-heading">Kontakt</h2>
         <div class="footer-links">
           <a href="mailto:kontakt@sveadigital.se" data-umami-event="mejl-footer">kontakt@sveadigital.se</a>
-          <span>[TELEFONNUMMER]</span>
+          <a href="tel:+46736491852" data-umami-event="telefon-footer">073 649 18 52</a>
           <span>Hela Sverige, på distans</span>
           <span>Svar inom 24 timmar</span>
-          <span>Org.nr [ORG.NR]</span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Svea Digital AB</p>
+      <p>© 2026 Svea Digital</p>
       <a href="/integritetspolicy">Integritetspolicy</a>
       <a href="/integritetspolicy#cookies">Cookies</a>
     </div>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salong Stella — Frisörsalong på Södermalm, Stockholm</title>
+  <meta name="description" content="Salong Stella erbjuder klippning, färgning och slingor på Södermalm i Stockholm. Boka tid enkelt online eller ring oss." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --rose: #c8796a;
+      --rose-dark: #a85f52;
+      --cream: #faf7f4;
+      --dark: #2c1a17;
+      --mid: #6b4c44;
+      --light-border: #edddd8;
+    }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: var(--dark); }
+    a { color: inherit; text-decoration: none; }
+
+    /* BADGE */
+    .example-badge {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: rgba(15,23,42,0.9);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 100px;
+      z-index: 9999;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.3px;
+    }
+    .example-badge a { color: #93c5fd; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+      border-bottom: 1px solid var(--light-border);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--dark);
+      letter-spacing: 1px;
+    }
+    .nav-logo span { color: var(--rose); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { font-size: 0.9rem; color: var(--mid); transition: color 0.15s; }
+    .nav-links a:hover { color: var(--dark); }
+    .nav-cta {
+      background: var(--rose);
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 0.875rem !important;
+      font-weight: 600;
+      transition: background 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--rose-dark) !important; color: #fff; }
+
+    /* HERO */
+    .hero {
+      padding: 140px 32px 80px;
+      background: var(--cream);
+      text-align: center;
+    }
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--mid);
+      max-width: 500px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--rose);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--rose-dark); }
+    .btn-ghost {
+      border: 2px solid var(--rose);
+      color: var(--rose);
+      padding: 12px 32px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.15s;
+      display: inline-block;
+    }
+    .btn-ghost:hover { background: var(--rose); color: #fff; }
+
+    /* SERVICES */
+    .services {
+      padding: 96px 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      color: var(--mid);
+      font-size: 1rem;
+      margin-bottom: 48px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .service-icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-name { font-weight: 700; font-size: 1rem; color: var(--dark); margin-bottom: 8px; }
+    .service-price { font-size: 0.9rem; color: var(--rose); font-weight: 600; margin-bottom: 8px; }
+    .service-desc { font-size: 0.88rem; color: var(--mid); line-height: 1.5; }
+
+    /* ABOUT */
+    .about {
+      background: var(--dark);
+      padding: 96px 32px;
+      color: #fff;
+    }
+    .about-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .about p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 16px;
+    }
+
+    /* REVIEWS */
+    .reviews {
+      padding: 80px 32px;
+      background: var(--cream);
+    }
+    .reviews-inner { max-width: 900px; margin: 0 auto; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .review-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 16px rgba(44,26,23,0.07);
+    }
+    .review-stars { color: #f59e0b; font-size: 0.9rem; margin-bottom: 12px; }
+    .review-text { font-size: 0.95rem; color: var(--mid); line-height: 1.6; margin-bottom: 14px; }
+    .review-author { font-weight: 600; font-size: 0.88rem; color: var(--dark); }
+
+    /* CONTACT */
+    .contact {
+      padding: 96px 32px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .contact-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .contact-info p { font-size: 0.97rem; color: var(--mid); line-height: 1.7; margin-bottom: 24px; }
+    .info-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+    .info-icon { font-size: 1.1rem; margin-top: 1px; flex-shrink: 0; }
+    .info-text { font-size: 0.92rem; color: var(--mid); line-height: 1.5; }
+    .form-field {
+      margin-bottom: 16px;
+    }
+    .form-field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .form-field input, .form-field textarea, .form-field select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--light-border);
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--dark);
+      background: var(--cream);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-field input:focus, .form-field textarea:focus {
+      border-color: var(--rose);
+    }
+    .form-field textarea { resize: vertical; min-height: 90px; }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 32px;
+      font-size: 0.85rem;
+    }
+    footer a { color: rgba(255,255,255,0.5); }
+    footer strong { color: rgba(255,255,255,0.8); }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 120px 20px 60px; }
+      .services, .contact { padding: 64px 20px; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <!-- Umami – cookiefri besöksstatistik -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
+</head>
+<body>
+
+  <div class="example-badge">Exempelprojekt — <a href="https://sveadigital.se">Svea Digital</a></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Salong<span>Stella</span></div>
+    <div class="nav-links">
+      <a href="#tjanster">Tjänster</a>
+      <a href="#om">Om oss</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="nav-cta">Boka tid</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Frisörsalong på Södermalm</div>
+    <h1>Din stil,<br /><em>ditt uttryck</em></h1>
+    <p>Vi hjälper dig hitta det utseende som känns som du. Välkommen till en salong som tar sig tid.</p>
+    <div class="hero-btns">
+      <a href="#kontakt" class="btn-primary">Boka tid online</a>
+      <a href="#tjanster" class="btn-ghost">Se tjänster</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="tjanster">
+    <div class="section-title">Våra tjänster</div>
+    <p class="section-sub">Alla priser inkl. moms. Vi anpassar alltid behandlingen efter ditt hår och önskemål.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <div class="service-name">Klippning dam</div>
+        <div class="service-price">från 450 kr</div>
+        <div class="service-desc">Klippning inkl. tvätt och grundstyling. Ca 60 min.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✂️</div>
+        <div class="service-name">Klippning herr</div>
+        <div class="service-price">från 350 kr</div>
+        <div class="service-desc">Klipp och styling för herr. Ca 45 min.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <div class="service-name">Helinfärgning</div>
+        <div class="service-price">från 750 kr</div>
+        <div class="service-desc">Permanent färg på hela håret inkl. klippning. Ca 2 tim.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <div class="service-name">Slingor / Balayage</div>
+        <div class="service-price">från 1 100 kr</div>
+        <div class="service-desc">Varma eller kalla toner, fri teknik. Ca 2,5–3 tim.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💆</div>
+        <div class="service-name">Styling &amp; uppläggning</div>
+        <div class="service-price">från 500 kr</div>
+        <div class="service-desc">Perfekt för bröllop, fest eller event. Inbokning i förväg.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👦</div>
+        <div class="service-name">Barnklippning</div>
+        <div class="service-price">275 kr</div>
+        <div class="service-desc">Barn upp till 12 år. Inkl. tvätt. Ca 30–45 min.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="om">
+    <div class="about-inner">
+      <h2>Om Salong Stella</h2>
+      <p>Salong Stella öppnade 2019 på Södermalm med en enkel idé: att skapa en plats där du kan känna dig bekväm och lämna med ett resultat du älskar.</p>
+      <p>Vi är ett litet team med stor passion för hår och hantverket bakom det. Vi använder enbart miljömärkta produkter och lägger stor vikt vid konsultation innan varje färgning.</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="reviews-inner">
+      <div class="section-title">Vad kunderna säger</div>
+      <p class="section-sub">⭐⭐⭐⭐⭐ 4,9 av 5 baserat på 87 Google-recensioner</p>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Bästa salongen jag hittat i Stockholm. De lyssnar verkligen och resultatet blir alltid exakt vad jag ville ha."</p>
+          <div class="review-author">Sofia L.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Jag hade inga förväntningar men blev helt överväldigad. Balayagen ser fantastisk ut och håller jättebra. Bokar igen!"</p>
+          <div class="review-author">Maria K.</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Snabb bokning, trevlig personal och perfekt klippning. Kommer definitivt tillbaka. Rekommenderas varmt!"</p>
+          <div class="review-author">Erik T.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="kontakt">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Boka tid</h2>
+        <p>Fyll i formuläret så återkommer vi med en tid. Du kan också ringa oss direkt.</p>
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div class="info-text">Hornsgatan 42, 118 21 Stockholm</div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📞</div>
+          <div class="info-text"><a href="tel:0812345678">08&#8209;123&nbsp;45&nbsp;67</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🕐</div>
+          <div class="info-text">Mån–fre: 09–18<br />Lör: 10–16<br />Sön: Stängt</div>
+        </div>
+      </div>
+      <form onsubmit="event.preventDefault()">
+        <div class="form-field">
+          <label>Namn</label>
+          <input type="text" placeholder="Anna Svensson" />
+        </div>
+        <div class="form-field">
+          <label>Telefon</label>
+          <input type="tel" placeholder="070-000 00 00" />
+        </div>
+        <div class="form-field">
+          <label>Tjänst</label>
+          <select>
+            <option>Välj tjänst...</option>
+            <option>Klippning dam</option>
+            <option>Klippning herr</option>
+            <option>Helinfärgning</option>
+            <option>Slingor / Balayage</option>
+            <option>Styling</option>
+            <option>Barnklippning</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Meddelande (valfritt)</label>
+          <textarea placeholder="Berätta gärna lite om vad du önskar..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="display:block;text-align:center;;width:100%;border:none;cursor:pointer;font:inherit">Skicka bokningsförfrågan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Salong Stella</strong> &nbsp;·&nbsp; Hornsgatan 42, Södermalm &nbsp;·&nbsp; <a href="tel:0812345678">08&#8209;123&nbsp;45&nbsp;67</a></p>
+    <p style="margin-top:8px;">© 2026 Salong Stella &nbsp;·&nbsp; Hemsida skapad av <a href="https://sveadigital.se">Svea Digital</a></p>
+  </footer>
+
+</body>
+</html>

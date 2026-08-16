@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurang Hamnen — Havsnära mat i Göteborg</title>
+  <meta name="description" content="Restaurang Hamnen serverar havsnära mat med lokala råvaror vid Göteborgs hamnfront. Boka bord online eller ring oss." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0d1b2a;
+      --navy-mid: #162840;
+      --gold: #c9a84c;
+      --gold-light: #e0c06a;
+      --cream: #f7f3ec;
+      --text: #2a1f0f;
+      --muted: #6b5e4e;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+
+    .example-badge {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: rgba(13,27,42,0.92);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 100px;
+      z-index: 9999;
+    }
+    .example-badge a { color: #93c5fd; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(13,27,42,0.95);
+      backdrop-filter: blur(12px);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { font-size: 0.85rem; color: rgba(255,255,255,0.65); letter-spacing: 0.5px; text-transform: uppercase; font-weight: 500; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-book {
+      border: 1px solid var(--gold) !important;
+      color: var(--gold) !important;
+      padding: 8px 20px;
+      border-radius: 2px;
+    }
+    .nav-book:hover { background: var(--gold) !important; color: var(--navy) !important; }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      min-height: 600px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(13,27,42,0.3) 0%, rgba(13,27,42,0.7) 100%),
+                  url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%230d1b2a"/><circle cx="50" cy="50" r="30" fill="%23162840" opacity="0.5"/></svg>') center/cover;
+    }
+    .hero-content { position: relative; z-index: 1; padding: 0 24px; }
+    .hero-tag {
+      font-size: 0.78rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 440px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 36px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: inline-block;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+    .btn-gold:hover { background: var(--gold-light); }
+    .btn-ghost-gold {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 13px 36px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: inline-block;
+      border-radius: 2px;
+      transition: all 0.15s;
+    }
+    .btn-ghost-gold:hover { background: var(--gold); color: var(--navy); }
+
+    /* INFO BAR */
+    .info-bar {
+      background: #fff;
+      border-bottom: 1px solid #e8e0d4;
+      padding: 20px 48px;
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      flex-wrap: wrap;
+    }
+    .info-item { text-align: center; }
+    .info-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 4px; }
+    .info-value { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+
+    /* MENU PREVIEW */
+    .menu { padding: 96px 48px; max-width: 1000px; margin: 0 auto; }
+    .section-tag { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); margin-bottom: 12px; }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      color: var(--text);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .section-sub { font-size: 0.97rem; color: var(--muted); margin-bottom: 56px; line-height: 1.6; }
+    .menu-category { margin-bottom: 48px; }
+    .menu-cat-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-bottom: 24px;
+      font-weight: 600;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #ddd5c8;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid #ede8e0;
+    }
+    .menu-item:last-child { border-bottom: none; }
+    .menu-name { font-weight: 600; font-size: 0.95rem; color: var(--text); }
+    .menu-desc { font-size: 0.85rem; color: var(--muted); margin-top: 3px; }
+    .menu-price { font-weight: 600; font-size: 0.95rem; color: var(--text); flex-shrink: 0; }
+
+    /* ABOUT */
+    .about {
+      background: var(--navy);
+      padding: 96px 48px;
+      text-align: center;
+      color: #fff;
+    }
+    .about-inner { max-width: 640px; margin: 0 auto; }
+    .about h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: var(--gold);
+    }
+    .about p { font-size: 1.05rem; line-height: 1.8; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+
+    /* BOOKING */
+    .booking { padding: 96px 48px; max-width: 700px; margin: 0 auto; }
+    .booking h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--text);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .booking p { font-size: 0.97rem; color: var(--muted); margin-bottom: 32px; line-height: 1.6; }
+    .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { margin-bottom: 0; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .form-field input, .form-field textarea, .form-field select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd5c8;
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--gold); }
+    .form-field textarea { min-height: 90px; resize: vertical; }
+
+    /* FOOTER */
+    footer { background: var(--navy-mid); padding: 40px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--gold); }
+    footer p { font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+    footer a { color: rgba(255,255,255,0.4); }
+
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero h1 { font-size: 3rem; }
+      .info-bar { gap: 24px; padding: 16px 20px; }
+      .menu, .booking, .about { padding: 64px 20px; }
+      .booking-grid { grid-template-columns: 1fr; }
+      footer { padding: 28px 20px; flex-direction: column; text-align: center; }
+    }
+  </style>
+  <!-- Umami – cookiefri besöksstatistik -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="bc0ebba3-a1f1-4047-b0be-d72153b63645"></script>
+</head>
+<body>
+
+  <div class="example-badge">Exempelprojekt — <a href="https://sveadigital.se">Svea Digital</a></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Restaurang Hamnen</div>
+    <div class="nav-links">
+      <a href="#meny">Meny</a>
+      <a href="#om">Om oss</a>
+      <a href="#boka">Boka bord</a>
+      <a href="#boka" class="nav-book">Boka bord</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Göteborg · Hamnfront</div>
+      <h1>Mat som<br />smakar <em>hav</em></h1>
+      <p class="hero-sub">Lokala råvaror, enkla smaker och vy mot Göta älv. Välkommen till en restaurang som tar råvaran på allvar.</p>
+      <div class="hero-btns">
+        <a href="#boka" class="btn-gold">Boka bord</a>
+        <a href="#meny" class="btn-ghost-gold">Se menyn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO BAR -->
+  <div class="info-bar">
+    <div class="info-item"><div class="info-label">Öppet</div><div class="info-value">Tis–Sön 17–23</div></div>
+    <div class="info-item"><div class="info-label">Kök stänger</div><div class="info-value">21:30</div></div>
+    <div class="info-item"><div class="info-label">Adress</div><div class="info-value">Stenpiren 4, Göteborg</div></div>
+    <div class="info-item"><div class="info-label">Telefon</div><div class="info-value"><a href="tel:031987654">031&#8209;987&nbsp;654</a></div></div>
+  </div>
+
+  <!-- MENU -->
+  <section class="menu" id="meny">
+    <div class="section-tag">Urval</div>
+    <div class="section-title">Dagens meny</div>
+    <p class="section-sub">Menyn förändras med säsongen och vad havet ger oss. Informera oss om allergier vid bokning.</p>
+
+    <div class="menu-category">
+      <div class="menu-cat-title">Förrätter</div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">Löjrom med gräddfil och potatisskivor</div>
+          <div class="menu-desc">Löjrom från Kalix, kallrökt och serverad med handgjorda potatisskivor och dill</div>
+        </div>
+        <div class="menu-price">195 kr</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">Pilgrimsmussla med citronsmör</div>
+          <div class="menu-desc">Tre pilgrimsmusslor, bränd purjolök, citronsmör och havskrasse</div>
+        </div>
+        <div class="menu-price">185 kr</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">Ceviche på havskatt</div>
+          <div class="menu-desc">Citrus, koriander, jalapeño och rödlök. Serveras med rostbröd</div>
+        </div>
+        <div class="menu-price">165 kr</div>
+      </div>
+    </div>
+
+    <div class="menu-category">
+      <div class="menu-cat-title">Huvudrätter</div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">Grillad hälleflundra</div>
+          <div class="menu-desc">Med rostad blomkål, tryffelmajonnäs och sparris. Potatis enligt säsong</div>
+        </div>
+        <div class="menu-price">345 kr</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">Hummer thermidor</div>
+          <div class="menu-desc">Halv hummer med klassisk thermidorsås, rostad vitlöksbaguette och sallad</div>
+        </div>
+        <div class="menu-price">475 kr</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">Västkustgryta</div>
+          <div class="menu-desc">Räkor, musslor, bläckfisk och torsk i tomatsås. Serveras med rostat surdegsbröd</div>
+        </div>
+        <div class="menu-price">295 kr</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-name">Vegetarisk risotto (V)</div>
+          <div class="menu-desc">Parmesan, tryffelolja, säsongens grönsaker och riven zucchini</div>
+        </div>
+        <div class="menu-price">245 kr</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="om">
+    <div class="about-inner">
+      <h2>Om Restaurang Hamnen</h2>
+      <p>Vi öppnade 2021 med en vision: att laga mat som respekterar råvarorna och den plats vi lever i. Havet utanför Göteborg är fantastiskt — vi vill visa det på tallriken.</p>
+      <p>Allt fisk och skaldjur vi serverar är lokalt och hållbart fiskat. Grönsaker köper vi från ett handfull lokala gårdar i Västra Götaland, och köttet — de få gånger vi serverar det — är alltid ekologiskt.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking" id="boka">
+    <div class="section-tag">Reservationer</div>
+    <h2>Boka bord</h2>
+    <p>Fyll i formuläret nedan så bekräftar vi din bokning inom 4 timmar. För sällskap över 8 personer, ring oss direkt.</p>
+    <div class="booking-grid">
+      <div class="form-field"><label>Namn</label><input type="text" placeholder="Anna Lindqvist" /></div>
+      <div class="form-field"><label>Telefon</label><input type="tel" placeholder="070-000 00 00" /></div>
+      <div class="form-field"><label>Datum</label><input type="date" /></div>
+      <div class="form-field"><label>Tid</label>
+        <select>
+          <option>17:00</option><option>17:30</option><option>18:00</option>
+          <option>18:30</option><option>19:00</option><option>19:30</option>
+          <option>20:00</option><option>20:30</option><option>21:00</option>
+        </select>
+      </div>
+      <div class="form-field"><label>Antal gäster</label>
+        <select>
+          <option>1</option><option>2</option><option>3</option>
+          <option>4</option><option>5</option><option>6</option>
+          <option>7</option><option>8</option>
+        </select>
+      </div>
+      <div class="form-field"><label>E-post</label><input type="email" placeholder="anna@email.se" /></div>
+      <div class="form-field full"><label>Allergier eller önskemål</label><textarea placeholder="T.ex. glutenintolerans, födelsdagsfirande, hörnbord..."></textarea></div>
+      <div class="form-field full"><button type="submit" class="btn-gold" style="display:block;text-align:center;;width:100%;border:none;cursor:pointer;font:inherit">Skicka bokningsförfrågan</button></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Restaurang Hamnen</div>
+    <div>
+      <p>Stenpiren 4, 411 04 Göteborg &nbsp;·&nbsp; <a href="tel:031987654">031&#8209;987&nbsp;654</a></p>
+      <p style="margin-top:6px;">Hemsida skapad av <a href="https://sveadigital.se">Svea Digital</a> &nbsp;·&nbsp; © 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>

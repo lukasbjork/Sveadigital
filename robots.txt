@@ -4,7 +4,8 @@ Allow: /
 # Tacksidan har inget eget värde i sökresultatet
 Disallow: /tack
 
-# Demosajterna under /showcase/ är exempelprojekt och bär redan noindex.
-# De hålls crawlbara så att noindex faktiskt kan läsas av sökmotorn.
+# /portfolio, /kundcase* och /showcase* är arkiverade (se _archive/README.md).
+# Adresserna svarar med en omdirigering till startsidan och hålls crawlbara
+# så att sökmotorn faktiskt kan läsa den.
 
 Sitemap: https://sveadigital.se/sitemap.xml
